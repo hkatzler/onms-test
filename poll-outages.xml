@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outages xmlns="http://xmlns.opennms.org/xsd/config/poller/outages">
+    <outage name="de017-switch-018.gls-itservices.com" type="specific">
+        <ns1:time xmlns:ns1="http://xmlns.opennms.org/xsd/types"
+            begins="16-Oct-2012 00:00:00" ends="18-Oct-2012 23:59:59"/>
+        <node id="3906"/>
+    </outage>
+</outages>

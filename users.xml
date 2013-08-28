@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userinfo xmlns="http://xmlns.opennms.org/xsd/users">
+    <header>
+        <rev>.9</rev>
+        <created>Thursday, March 14, 2013 6:50:41 AM GMT</created>
+        <mstation>master.nmanage.com</mstation>
+    </header>
+    <users>
+        <user>
+            <user-id>admin</user-id>
+            <full-name>Administrator</full-name>
+            <user-comments>Default administrator, do not delete</user-comments>
+            <password>48E69F4637610DC052C7D68DDD65D1DB</password>
+        </user>
+        <user read-only="false">
+            <user-id>hkatzler</user-id>
+            <full-name>Heiko Katzler</full-name>
+            <user-comments>Network Operations Neuenstein</user-comments>
+            <password>E8636EA013E682FAF61F56CE1CB1AB5C</password>
+            <contact type="email" info="heiko.katzler@gls-itservices.com"/>
+            <contact type="pagerEmail" info=""/>
+            <contact type="xmppAddress" info=""/>
+            <contact type="microblog" info=""/>
+            <contact type="numericPage" info="" serviceProvider=""/>
+            <contact type="textPage"
+                info="2a7d60f6f8d07595cd21a38edde29a8d6edf7bc1" serviceProvider=""/>
+            <contact type="workPhone" info="+49667717481"/>
+            <contact type="mobilePhone" info="+491726826802"/>
+            <contact type="homePhone" info=""/>
+            <duty-schedule>MoTuWeThFrSaSu0-2359</duty-schedule>
+        </user>
+    </users>
+</userinfo>

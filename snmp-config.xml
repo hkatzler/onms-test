@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<snmp-config xmlns="http://xmlns.opennms.org/xsd/config/snmp" retry="1"
+    timeout="2800" read-community="gpcisco" version="v2c">
+    <definition read-community="gpcisco" version="v1">
+        <specific xmlns="">10.1.100.17</specific>
+        <specific xmlns="">10.1.100.59</specific>
+        <specific xmlns="">10.1.102.199</specific>
+        <specific xmlns="">10.2.75.29</specific>
+        <specific xmlns="">10.230.0.1</specific>
+        <specific xmlns="">10.230.0.2</specific>
+        <specific xmlns="">10.230.0.3</specific>
+        <specific xmlns="">10.230.0.4</specific>
+        <specific xmlns="">10.1.102.219</specific>
+    </definition>
+    <definition read-community="public" version="v1">
+        <ns1:range xmlns:ns1="http://xmlns.opennms.org/xsd/types"
+            begin="10.1.102.188" end="10.1.102.189"/>
+        <specific xmlns="">10.1.100.178</specific>
+    </definition>
+</snmp-config>

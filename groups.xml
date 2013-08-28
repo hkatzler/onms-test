@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groupinfo xmlns="http://xmlns.opennms.org/xsd/groups">
+    <header>
+        <rev>1.3</rev>
+        <created>Thursday, March 14, 2013 6:50:41 AM GMT</created>
+        <mstation>dhcp-219.internal.opennms.org</mstation>
+    </header>
+    <groups>
+        <group>
+            <name>Admin</name>
+            <comments>The administrators</comments>
+            <user>admin</user>
+        </group>
+        <group>
+            <name>Remoting Users</name>
+            <comments>Users with access for submitting remote poller management data.</comments>
+            <user>remoting</user>
+        </group>
+        <group>
+            <name>at-it</name>
+            <comments>Responsible IT people for Austria</comments>
+        </group>
+        <group>
+            <name>ie-it</name>
+            <comments>Responsible IT people for Ireland</comments>
+        </group>
+        <group>
+            <name>de-it-ost</name>
+            <comments>Responsible IT people for DE Region-Ost</comments>
+        </group>
+        <group>
+            <name>de-it-sued</name>
+            <comments>Responsible IT people for DE Region-Sued</comments>
+        </group>
+        <group>
+            <name>de-it-sued-west</name>
+            <comments>Responsible IT people for DE Region-Sued-West</comments>
+        </group>
+        <group>
+            <name>de-it-nord</name>
+            <comments>Responsible IT people for DE Region-Nord</comments>
+        </group>
+        <group>
+            <name>de-it-mitte</name>
+            <comments>Responsible IT people for DE Region-Mitte</comments>
+        </group>
+        <group>
+            <name>de-it-west</name>
+            <comments>Responsible IT people for DE Region-West</comments>
+        </group>
+        <group>
+            <name>netops-nst</name>
+            <comments>Network Operations Neuenstein</comments>
+            <user>hkatzler</user>
+            <duty-schedule>MoTuWeThFr700-1800</duty-schedule>
+        </group>
+        <group>
+            <name>nl-it</name>
+            <comments>Responsible IT people for Netherlands</comments>
+        </group>
+        <group>
+            <name>be-it</name>
+            <comments>Responsible IT people for Belgium</comments>
+        </group>
+        <group>
+            <name>pl-it</name>
+            <comments>Responsible IT people for Poland</comments>
+        </group>
+        <group>
+            <name>pt-it</name>
+            <comments>Responsible IT people for Potugal</comments>
+        </group>
+        <group>
+            <name>es-it</name>
+            <comments>Responsible IT people for Spain</comments>
+        </group>
+        <group>
+            <name>fr-it</name>
+            <comments>Responsible IT people for France</comments>
+        </group>
+        <group>
+            <name>de-it-sued-bayer</name>
+            <comments>Field IT Division (80,81,82,84)</comments>
+        </group>
+        <group>
+            <name>systec</name>
+            <comments></comments>
+        </group>
+    </groups>
+    <roles>
+        <role name="NewRole" membership-group="Admin" supervisor="VFM2M" description=""/>
+    </roles>
+</groupinfo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2012-10-11T12:52:57.935+02:00" name="de001-server-adonis-phy" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.snmp.SnmpDetector" name="SNMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.ssh.SshDetector" name="SSH"/>
+    </detectors>
+    <policies>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="no_adonis_virt">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ALL_PARAMETERS" key="matchBehavior"/>
+            <parameter value="217.7.24.140" key="ipAddress"/>
+        </policy>
+    </policies>
+</foreign-source>

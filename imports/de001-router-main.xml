@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import non-ip-snmp-primary="N" non-ip-interfaces="false" last-import="2013-03-14T07:42:52.222+01:00" foreign-source="de001-router-main" date-stamp="2013-03-14T07:42:52.195+01:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="de001-cisco-main-vodafone01-011.gls-itservices.com" foreign-id="1319793314862" building="de001-router-leasedline">
+        <interface snmp-primary="P" status="1" ip-addr="10.3.96.11" descr="vlan1">
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="router-leasedline"/>
+        <category name="de-router-leasedline"/>
+        <category name="de-devices"/>
+        <category name="de001-devices"/>
+        <category name="de001-router"/>
+        <category name="de001-router-leasedline"/>
+    </node>
+</model-import>

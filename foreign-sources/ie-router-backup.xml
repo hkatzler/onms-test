@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2011-11-24T09:12:52.565+01:00" name="ie-router-backup" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>6h</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.snmp.SnmpDetector" name="Cisco-Fan-Monitor">
+            <parameter value=".1.3.6.1.4.1.9.9.13.1.4.1.3" key="vbname"/>
+            <parameter value="true" key="table"/>
+            <parameter value="1" key="vbvalue"/>
+            <parameter value="2000" key="timeout"/>
+            <parameter value="1" key="retries"/>
+        </detector>
+    </detectors>
+    <policies>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="Block_Virtual_Inf">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ALL_PARAMETERS" key="matchBehavior"/>
+            <parameter value="~^[1][0].*10$" key="ipAddress"/>
+        </policy>
+    </policies>
+</foreign-source>

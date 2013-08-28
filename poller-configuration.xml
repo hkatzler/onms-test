@@ -1,0 +1,651 @@
+<?xml version="1.0"?>
+<?castor class-name="org.opennms.netmgt.poller.PollerConfiguration"?>
+<poller-configuration threads="25" 
+                      serviceUnresponsiveEnabled="false" 
+                      pathOutageEnabled="true">
+  <node-outage status="on">
+    <critical-service name="ICMP" />
+  </node-outage>
+  <package name="example1">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <include-range begin="1.1.1.1" end="254.254.254.254" />
+    <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff" />
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+    <service name="ICMP" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="2" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="icmp" />
+      <parameter key="ds-name" value="icmp" />
+    </service>
+    <service name="DNS" interval="300000" user-defined="false" status="off">
+      <parameter key="retry" value="2" />
+      <parameter key="timeout" value="5000" />
+      <parameter key="port" value="53" />
+      <parameter key="lookup" value="localhost" />
+      <parameter key="fatal-response-codes" value="2,3,5" /><!-- ServFail, NXDomain, Refused -->
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="dns" />
+      <parameter key="ds-name" value="dns" />
+    </service>
+    <service name="SMTP" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="25" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="smtp" />
+      <parameter key="ds-name" value="smtp" />
+    </service>
+    <service name="FTP" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="21" />
+      <parameter key="userid" value="" />
+      <parameter key="password" value="" />
+    </service>
+    <service name="SNMP" interval="300000" user-defined="false" status="on">
+      <parameter key="oid" value=".1.3.6.1.2.1.1.2.0" />
+    </service>
+    <service name="HTTP" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="80" />
+      <parameter key="url" value="/" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="http" />
+      <parameter key="ds-name" value="http" />
+    </service>
+    <service name="HTTP-8080" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="8080" />
+      <parameter key="url" value="/" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="http-8080" />
+      <parameter key="ds-name" value="http-8080" />
+    </service>
+    <service name="HTTP-8000" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="8000" />
+      <parameter key="url" value="/" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="http-8000" />
+      <parameter key="ds-name" value="http-8000" />
+    </service>
+    <service name="HTTPS" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="5000" />
+      <parameter key="port" value="443" />
+      <parameter key="url" value="/" />
+    </service>
+    <service name="HypericAgent" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="2200" />
+      <parameter key="port" value="2144" />
+    </service>
+    <service name="HypericHQ" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="hyperic-hq" />
+      <parameter key="ds-name" value="hyperic-hq" />
+      <parameter key="page-sequence">
+        <page-sequence>
+          <page path="/Login.do" port="7080" successMatch="(HQ Login)|(Sign in to Hyperic HQ)" />
+          <page path="/j_security_check.do" port="7080" method="POST"
+            failureMatch="(?s)(The username or password provided does not match our records)|(You are not signed in)" failureMessage="HQ Login in Failed"
+            successMatch="HQ Dashboard">
+            <parameter key="j_username" value="hqadmin" />
+            <parameter key="j_password" value="hqadmin" />
+          </page>
+          <page path="/Logout.do" port="7080" successMatch="HQ Login" />
+        </page-sequence>
+      </parameter>
+    </service>
+    <service name="MySQL" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="3306" />
+      <parameter key="banner" value="*" />
+    </service>
+    <service name="SQLServer" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="1433" />
+      <parameter key="banner" value="*" />
+    </service>
+    <service name="Oracle" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="1521" />
+      <parameter key="banner" value="*" />
+    </service>
+    <service name="Postgres" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="banner" value="*" />
+      <parameter key="port" value="5432" />
+      <parameter key="timeout" value="3000" />
+    </service>
+    <service name="SSH" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="banner" value="SSH" />
+      <parameter key="port" value="22" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="ssh" />
+      <parameter key="ds-name" value="ssh" />
+    </service>
+    <service name="DHCP" interval="300000" user-defined="false" status="off">
+      <parameter key="retry" value="2" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="dhcp" />
+      <parameter key="ds-name" value="dhcp" />
+    </service>
+    <service name="IMAP" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="port" value="143" />
+      <parameter key="timeout" value="3000" />
+    </service>
+    <service name="POP3" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="1" />
+      <parameter key="port" value="110" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="pop3" />
+      <parameter key="ds-name" value="pop3" />
+    </service>
+    <service name="NRPE" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="3" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="5666" />
+      <parameter key="command" value="_NRPE_CHECK" />
+      <parameter key="padding" value="2" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="ds-name" value="nrpe" />
+    </service>
+    <service name="NRPE-NoSSL" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="3" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="5666" />
+      <parameter key="command" value="_NRPE_CHECK" />
+      <parameter key="usessl" value="false" />
+      <parameter key="padding" value="2" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="ds-name" value="nrpe" />
+    </service>
+    <service name="Windows-Task-Scheduler" interval="300000" user-defined="false" status="on">
+      <parameter key="service-name" value="Task Scheduler" />
+    </service>
+    <service name="OpenNMS-JVM" interval="300000" user-defined="false" status="on">
+      <parameter key="port" value="18980"/>
+      <parameter key="factory" value="PASSWORD-CLEAR"/>
+      <parameter key="username" value="admin"/>
+      <parameter key="password" value="admin"/>
+      <parameter key="retry" value="2"/>
+      <parameter key="timeout" value="3000"/>
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="ds-name" value="opennms-jvm"/>
+      <parameter key="friendly-name" value="opennms-jvm"/>
+    </service>
+
+    <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="432000000" delete="true" /><!-- anything after 5 days delete -->
+
+  </package>
+
+  <!-- Moved StrafePing to its own package.  This allows for more flexible configuration of which interfaces
+    will have StrafePing statistical analysis rather than being on for or off for all interfaces.  Change
+    this package's filter / ranges for directing the StrafePinger to choice interfaces.  Note: Strafing all
+    of your network interface may create high loads on the NMS file system.  -->
+
+  <package name="strafer">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <include-range begin="172.31.1.1" end="172.31.1.200" />
+    <include-range begin="172.31.6.3" end="172.31.6.99" />
+    <!-- <include-range begin="::1" end="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff" /> -->
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+    <service name="StrafePing" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="0" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="ping-count" value="20" />
+      <parameter key="failure-ping-count" value="20" />
+      <parameter key="wait-interval" value="50" />
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="strafeping" />
+      <parameter key="thresholding-enabled" value="true"/>
+    </service>
+    <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+  </package>
+
+  <package name="GLS-Cisco-Env-Monitoring">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <include-range begin="10.82.31.0" end="10.82.59.254" />
+    <include-range begin="10.54.21.0" end="10.54.65.254" />
+    <include-range begin="10.74.8.0" end="10.74.240.254" />
+    <include-range begin="10.14.3.0" end="10.14.240.254" />
+    <include-range begin="10.62.69.0" end="10.62.69.254" />
+    <include-range begin="10.86.10.0" end="10.86.91.254" />
+    <include-range begin="10.90.9.0" end="10.90.95.254" />
+    <include-range begin="10.106.31.0" end="10.106.209.254" />
+    <include-range begin="10.35.1.0" end="10.35.254.254" />
+    <include-range begin="10.34.1.0" end="10.34.15.254" />
+    <include-range begin="10.2.7.0" end="10.2.99.254" />
+    <include-range begin="10.2.200.0" end="10.2.200.254" />
+    <include-range begin="10.240.15.0" end="10.240.85.254" />
+    <include-range begin="10.30.230.0" end="10.30.230.254" />
+    <include-range begin="10.42.91.0" end="10.42.91.254" />
+    <include-range begin="10.122.5.0" end="10.122.10.254" />
+    <include-range begin="10.58.1.0" end="10.58.1.254" />
+    <include-range begin="10.102.11.0" end="10.102.11.254" />
+    <include-range begin="10.98.100.0" end="10.98.100.254" />
+    <include-range begin="10.26.11.0" end="10.26.93.254" />
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+    <service name="Cisco-Voltage-Monitor" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="3" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="161" />
+      <parameter key="oid" value=".1.3.6.1.4.1.9.9.13.1.2.1.7" />
+      <parameter key="walk" value="true" />
+      <parameter key="operator" value="=" />
+      <parameter key="operand" value="1" />
+      <parameter key="match-all" value="true" />
+      <parameter key="reason-template" value="A problem with Cisco voltage detected. \
+          The state should be normal(${operand}) but actual value is ${observedValue}. \
+          Syntax: normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)" />
+  </service>
+  <service name="Cisco-Temperature-Monitor" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="3" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="161" />
+      <parameter key="oid" value=".1.3.6.1.4.1.9.9.13.1.3.1.6" />
+      <parameter key="walk" value="true" />
+      <parameter key="operator" value="=" />
+      <parameter key="operand" value="1" />
+      <parameter key="match-all" value="true" />
+      <parameter key="reason-template" value="A problem with Cisco temperature detected. \
+          The state should be normal(${operand}) but actual value is ${observedValue}. \
+          Syntax: normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)" />
+  </service>
+  <service name="Cisco-Fan-Monitor" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="3" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="161" />
+      <parameter key="oid" value=".1.3.6.1.4.1.9.9.13.1.4.1.3" />
+      <parameter key="walk" value="true" />
+      <parameter key="operator" value="=" />
+      <parameter key="operand" value="1" />
+      <parameter key="match-all" value="true" />
+      <parameter key="reason-template" value="A problem with Cisco fans detected. \
+          The state should be normal(${operand}) but actual value is ${observedValue}. \
+          Syntax: normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)" />
+  </service>
+  <service name="Cisco-PowerSupply-Monitor" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="3" />
+      <parameter key="timeout" value="3000" />
+      <parameter key="port" value="161" />
+      <parameter key="oid" value=".1.3.6.1.4.1.9.9.13.1.5.1.3" />
+      <parameter key="walk" value="true" />
+      <parameter key="operator" value="=" />
+      <parameter key="operand" value="1" />
+      <parameter key="match-all" value="true" />
+      <parameter key="reason-template" value="A problem with Cisco power supplies detected. \
+          The state should be normal(${operand}) but actual value is ${observedValue}. \
+          Syntax: normal(1), warning(2), critical(3), shutdown(4), notPresent(5), notFunctioning(6)" />
+  </service>
+
+    <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+
+  </package>
+
+  <package name="GLS-DNS-Service-Monitoring-intern">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <include-range begin="10.1.50.151" end="10.1.50.154" />
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+
+  <service name="DNS-internal" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="2" />
+      <parameter key="timeout" value="5000" />
+      <parameter key="port" value="53" />
+      <parameter key="lookup" value="dedpt3500.d35.gls-germany.com" />
+      <parameter key="fatal-response-codes" value="2,3,5" /><!-- ServFail, NXDomain, Refused -->
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="dns-internal" />
+      <parameter key="ds-name" value="dns-internal" />
+    </service>
+
+  <service name="DNS-adonis" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="2" />
+      <parameter key="timeout" value="5000" />
+      <parameter key="port" value="53" />
+      <parameter key="lookup" value="www.gls-group.eu" />
+      <parameter key="fatal-response-codes" value="2,3,5" /><!-- ServFail, NXDomain, Refused -->
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="dns-vs-dmz" />
+      <parameter key="ds-name" value="dns-vs-dmz" />
+    </service>
+
+   <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+
+  </package>
+ 
+    <package name="GLS-DNS-Service-Monitoring-extern">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <specific>217.7.24.140</specific>
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+
+  <service name="DNS-external" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="2" />
+      <parameter key="timeout" value="5000" />
+      <parameter key="port" value="53" />
+      <parameter key="lookup" value="www.google.com" />
+      <parameter key="fatal-response-codes" value="2,3,5" /><!-- ServFail, NXDomain, Refused -->
+      <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response" />
+      <parameter key="rrd-base-name" value="dns-external" />
+      <parameter key="ds-name" value="dns-external" />
+    </service>
+
+   <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+
+  </package>
+
+  <package name="GLS-Radius-Monitoring">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <specific>10.1.103.13</specific>
+    <specific>10.1.103.14</specific>
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+
+    <service name="RadiusAuth" interval="300000" user-defined="false" status="on">
+           <parameter key="retry" value="3"/>
+           <parameter key="authport" value="1812"/>
+           <parameter key="acctport" value="1813"/>
+           <parameter key="timeout" value="3000"/>
+           <parameter key="user" value="opennms"/>
+           <parameter key="password" value="opennms"/>
+           <parameter key="secret" value="testing123"/>
+           <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response"/>
+           <parameter key="ds-name" value="radiusauth"/>
+   </service>
+
+   <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+
+  </package>
+ 
+  <package name="GLS-Radius-Monitoring2">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <specific>10.1.103.1</specific>
+    <specific>10.1.103.2</specific>
+    <specific>10.1.103.3</specific>
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+
+    <service name="RadiusAuth2" interval="300000" user-defined="false" status="on">
+           <parameter key="retry" value="3"/>
+           <parameter key="authport" value="1812"/>
+           <parameter key="acctport" value="1813"/>
+           <parameter key="timeout" value="3000"/>
+           <parameter key="user" value="opennms"/>
+           <parameter key="password" value="opennms"/>
+           <parameter key="secret" value="R4diU5"/>
+           <parameter key="rrd-repository" value="/var/lib/opennms/rrd/response"/>
+           <parameter key="ds-name" value="radiusauth"/>
+   </service>
+
+   <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+
+  </package>
+
+  <package name="GLS-LDAP-Monitoring">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <specific>10.1.103.1</specific>
+    <specific>10.1.103.2</specific>
+    <specific>10.1.103.3</specific>
+    <specific>10.1.103.13</specific>
+    <specific>10.1.103.14</specific>
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+   
+    <service name="LDAP" interval="300000" user-defined="false" status="on">
+       <parameter key="port" value="389"/>
+       <parameter key="version" value="2"/>
+       <parameter key="searchbase" value="OU=admin,DC=gls-holding,DC=com"/>
+       <parameter key="searchfilter" value="UID=opennms"/>
+       <parameter key="dn" value="CN=opennms opennms,OU=admin,DC=gls-holding,DC=com"/>
+       <parameter key="password" value="@}?VchY+Z5r$"/>
+       <parameter key="retry" value="2"/>
+       <parameter key="timeout" value="3000"/>
+   </service>
+   
+   <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+
+  </package>
+
+  <package name="GLS-APC-AKCP-Env-Monitoring">
+    <filter>IPADDR != '0.0.0.0'</filter>
+    <include-range begin="10.1.100.1" end="10.1.100.254" />
+    <include-range begin="10.1.102.1" end="10.1.102.254" />
+    <rrd step="300">
+      <rra>RRA:AVERAGE:0.5:1:2016</rra>
+      <rra>RRA:AVERAGE:0.5:12:1488</rra>
+      <rra>RRA:AVERAGE:0.5:288:366</rra>
+      <rra>RRA:MAX:0.5:288:366</rra>
+      <rra>RRA:MIN:0.5:288:366</rra>
+    </rrd>
+
+   <service name="APC-Battery-Status" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="5"/>
+      <parameter key="timeout" value="5950"/>
+      <parameter key="port" value="161"/>
+      <parameter key="oid" value=".1.3.6.1.4.1.318.1.1.1.2.1.1.0"/>
+      <parameter key="operator" value="="/>
+      <parameter key="operand" value="2"/>
+      <parameter key="reason-template" value="APC battery status is not normal. The state should be \
+              batteryNormal(${operand}) the observed value is ${observedValue}. Please check your APC event log. \
+              Syntax: unknown(1), batteryNormal(2), batteryLow(3)"/>
+  </service>
+  <service name="APC-Battery-Replace-Indicator" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="5"/>
+      <parameter key="timeout" value="5950"/>
+      <parameter key="port" value="161"/>
+      <parameter key="oid" value=".1.3.6.1.4.1.318.1.1.1.2.2.4.0"/>
+      <parameter key="operator" value="="/>
+      <parameter key="operand" value="1"/>
+      <parameter key="reason-template" value="APC UPS battery needs replacing. The state should be \
+              noBatteryNeedsReplacing(${operand}) the observed value is ${observedValue}. Please check your APC event log. \
+              Syntax: noBatteryNeedsReplacing(1), batteryNeedsReplacing(2)"/>
+  </service>
+  <service name="APC-Battery-Bad-Packs-Count" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="5"/>
+      <parameter key="timeout" value="5950"/>
+      <parameter key="port" value="161"/>
+      <parameter key="oid" value=".1.3.6.1.4.1.318.1.1.1.2.2.6.0"/>
+      <parameter key="operator" value="="/>
+      <parameter key="operand" value="0"/>
+      <parameter key="reason-template" value="APC UPS bad battery pack is detected. The state should be \
+              badPacks(${operand}) the observed value is ${observedValue}. Please check your APC event log. \
+              Syntax: Amount of bad battery packs"/>
+  </service>
+  <service name="APC-Output-Status" interval="300000" user-defined="false" status="on">
+      <parameter key="retry" value="5"/>
+      <parameter key="timeout" value="5950"/>
+      <parameter key="port" value="161"/>
+      <parameter key="oid" value=".1.3.6.1.4.1.318.1.1.1.4.1.1.0"/>
+      <parameter key="operator" value="="/>
+      <parameter key="operand" value="2"/>
+      <parameter key="reason-template" value="APC UPS output status is not online. The state should be \
+              onLine(${operand}) the observed value is ${observedValue}. Please check your APC event log. \
+              Syntax: unknown(1), onLine(2), onBattery(3), onSmartBoost(4), timedSleeping(5), softwareBypass(6), off(7), \  
+              rebooting(8), switchedBypass(9), hardwareFailureBypass(10), sleepingUntilPowerReturn(11), onSmartTrim(12)"/>
+  </service>
+
+  <service name="AKCP-Temperature" interval="300000"
+            user-defined="false" status="on">
+            <parameter key="retry" value="3"/>
+            <parameter key="timeout" value="3000"/>
+            <parameter key="port" value="161"/>
+            <parameter key="oid" value=".1.3.6.1.4.1.3854.2.3.2.1.6"/>
+            <parameter key="walk" value="true"/>
+            <parameter key="operator" value="="/>
+            <parameter key="operand" value="2"/>
+            <parameter key="match-all" value="true"/>
+            <parameter key="reason-template" value="A problem with AKCP Temperature Environment detected. The state should be normal(${operand}) but actual value is ${observedValue}. Syntax: noStatus(1), normal(2), highWarning(3), highCritical(4), lowWarning(5), lowCritical(6), sensorError(7)"/>
+        </service>
+        <service name="AKCP-Humidity" interval="300000"
+            user-defined="false" status="on">
+            <parameter key="retry" value="3"/>
+            <parameter key="timeout" value="3000"/>
+            <parameter key="port" value="161"/>
+            <parameter key="oid" value=".1.3.6.1.4.1.3854.2.3.3.1.6"/>
+            <parameter key="walk" value="true"/>
+            <parameter key="operator" value="="/>
+            <parameter key="operand" value="2"/>
+            <parameter key="match-all" value="true"/>
+            <parameter key="reason-template" value="A problem with AKCP Humidity Environment detected. The state should be normal(${operand}) but actual value is ${observedValue}. Syntax: noStatus(1), normal(2), highWarning(3), highCritical(4), lowWarning(5), lowCritical(6), sensorError(7)"/>
+        </service>
+        <service name="AKCP-Smoke" interval="300000"
+            user-defined="false" status="on">
+            <parameter key="retry" value="3"/>
+            <parameter key="timeout" value="3000"/>
+            <parameter key="port" value="161"/>
+            <parameter key="oid" value=".1.3.6.1.4.1.3854.2.3.4.1.6"/>
+            <parameter key="walk" value="true"/>
+            <parameter key="operator" value="="/>
+            <parameter key="operand" value="2"/>
+            <parameter key="match-all" value="true"/>
+            <parameter key="reason-template" value="A problem with AKCP Smoke Environment detected. The state should be normal(${operand}) but actual value is ${observedValue}. Syntax: noStatus(1), normal(2), highCritical(4), lowCritical(6), sensorError(7), relayOn(8), relayOff(9)"/>
+        </service>
+        <service name="AKCP-Water" interval="300000"
+            user-defined="false" status="on">
+            <parameter key="retry" value="3"/>
+            <parameter key="timeout" value="3000"/>
+            <parameter key="port" value="161"/>
+            <parameter key="oid" value=".1.3.6.1.4.1.3854.2.3.9.1.6"/>
+            <parameter key="walk" value="true"/>
+            <parameter key="operator" value="="/>
+            <parameter key="operand" value="2"/>
+            <parameter key="match-all" value="true"/>
+            <parameter key="reason-template" value="A problem with AKCP Water Environment detected. The state should be normal(${operand}) but actual value is ${observedValue}. Syntax: noStatus(1), normal(2), highCritical(4), lowCritical(6), sensorError(7), relayOn(8), relayOff(9)"/>
+        </service>
+
+    <downtime interval="30000" begin="0" end="300000" /><!-- 30s, 0, 5m -->
+    <downtime interval="300000" begin="300000" end="43200000" /><!-- 5m, 5m, 12h -->
+    <downtime interval="600000" begin="43200000" end="432000000" /><!-- 10m, 12h, 5d -->
+    <downtime begin="43200000" interval="1800000"/>
+
+  </package>
+
+  <monitor service="ICMP" class-name="org.opennms.netmgt.poller.monitors.IcmpMonitor" />
+  <monitor service="StrafePing" class-name="org.opennms.netmgt.poller.monitors.StrafePingMonitor" />
+  <monitor service="HTTP" class-name="org.opennms.netmgt.poller.monitors.HttpMonitor" />
+  <monitor service="HTTP-8080" class-name="org.opennms.netmgt.poller.monitors.HttpMonitor" />
+  <monitor service="HTTP-8000" class-name="org.opennms.netmgt.poller.monitors.HttpMonitor" />
+  <monitor service="HTTPS" class-name="org.opennms.netmgt.poller.monitors.HttpsMonitor" />
+  <monitor service="HypericAgent" class-name="org.opennms.netmgt.poller.monitors.TcpMonitor" />
+  <monitor service="HypericHQ" class-name="org.opennms.netmgt.poller.monitors.PageSequenceMonitor" />
+  <monitor service="SMTP" class-name="org.opennms.netmgt.poller.monitors.SmtpMonitor" />
+  <monitor service="DNS" class-name="org.opennms.netmgt.poller.monitors.DnsMonitor" />
+  <monitor service="FTP" class-name="org.opennms.netmgt.poller.monitors.FtpMonitor" />
+  <monitor service="SNMP" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor" />
+  <monitor service="Oracle" class-name="org.opennms.netmgt.poller.monitors.TcpMonitor" />
+  <monitor service="Postgres" class-name="org.opennms.netmgt.poller.monitors.TcpMonitor" />
+  <monitor service="MySQL" class-name="org.opennms.netmgt.poller.monitors.TcpMonitor" />
+  <monitor service="SQLServer" class-name="org.opennms.netmgt.poller.monitors.TcpMonitor" />
+  <monitor service="SSH" class-name="org.opennms.netmgt.poller.monitors.SshMonitor" />
+  <monitor service="DHCP" class-name="org.opennms.protocols.dhcp.monitor.DhcpMonitor" />
+  <monitor service="IMAP" class-name="org.opennms.netmgt.poller.monitors.ImapMonitor" />
+  <monitor service="POP3" class-name="org.opennms.netmgt.poller.monitors.Pop3Monitor" />
+  <monitor service="NRPE" class-name="org.opennms.netmgt.poller.monitors.NrpeMonitor" />
+  <monitor service="NRPE-NoSSL" class-name="org.opennms.netmgt.poller.monitors.NrpeMonitor" />
+  <monitor service="Windows-Task-Scheduler" class-name="org.opennms.netmgt.poller.monitors.Win32ServiceMonitor" />
+  <monitor service="OpenNMS-JVM" class-name="org.opennms.netmgt.poller.monitors.Jsr160Monitor" />
+
+<!-- GLS-Monitore -->
+
+  <monitor service="Cisco-Voltage-Monitor" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="Cisco-Temperature-Monitor" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="Cisco-Fan-Monitor" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="Cisco-PowerSupply-Monitor" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="APC-Battery-Status" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="APC-Battery-Replace-Indicator" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="APC-Battery-Bad-Packs-Count" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="APC-Output-Status" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="AKCP-Temperature" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="AKCP-Humidity" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="AKCP-Water" class-name="org.opennms.netmgt.poller.monitors.SnmpMonitor"/>
+  <monitor service="DNS-internal" class-name="org.opennms.netmgt.poller.monitors.DnsMonitor" />
+  <monitor service="DNS-adonis" class-name="org.opennms.netmgt.poller.monitors.DnsMonitor" />
+  <monitor service="DNS-external" class-name="org.opennms.netmgt.poller.monitors.DnsMonitor" />
+  <monitor service="RadiusAuth" class-name="org.opennms.protocols.radius.monitor.RadiusAuthMonitor"/>
+  <monitor service="LDAP" class-name="org.opennms.netmgt.poller.monitors.LdapMonitor"/>
+
+</poller-configuration>

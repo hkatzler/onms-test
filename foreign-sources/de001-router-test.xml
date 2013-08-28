@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2012-03-23T09:34:38.128+01:00" name="de001-router-test" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.snmp.SnmpDetector" name="Cisco-Fan-Monitor">
+            <parameter value=".1.3.6.1.4.1.9.9.13.1.4.1.3" key="vbname"/>
+            <parameter value="true" key="table"/>
+            <parameter value="1" key="vbvalue"/>
+            <parameter value="2000" key="timeout"/>
+            <parameter value="1" key="retries"/>
+        </detector>
+    </detectors>
+    <policies/>
+</foreign-source>

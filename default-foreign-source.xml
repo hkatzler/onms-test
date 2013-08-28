@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2012-10-31T10:58:27.130+01:00" name="default" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.datagram.DnsDetector" name="DNS"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.FtpDetector" name="FTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpDetector" name="HTTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpsDetector" name="HTTPS"/>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.ImapDetector" name="IMAP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.LdapDetector" name="LDAP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.NrpeDetector" name="NRPE"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.Pop3Detector" name="POP3"/>
+        <detector class="org.opennms.netmgt.provision.detector.radius.RadiusAuthDetector" name="Radius"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.SmtpDetector" name="SMTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.snmp.SnmpDetector" name="SNMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.ssh.SshDetector" name="SSH"/>
+        <detector class="org.opennms.protocols.dhcp.detector.DhcpDetector" name="DHCP"/>
+        <detector class="org.opennms.protocols.radius.detector.RadiusAuthDetector" name="RadiusAuth">
+            <parameter value="1813" key="acctPort"/>
+            <parameter value="1812" key="authPort"/>
+            <parameter value="testing123" key="secret"/>
+            <parameter value="3" key="retries"/>
+            <parameter value="3000" key="timeout"/>
+            <parameter value="opennms" key="user"/>
+            <parameter value="opennms" key="password"/>
+        </detector>
+    </detectors>
+    <policies>
+        <policy class="org.opennms.netmgt.provision.persist.policies.NodeCategorySettingPolicy" name="SetCatNewDev">
+            <parameter value="new-devices" key="category"/>
+            <parameter value="NO_PARAMETERS" key="matchBehavior"/>
+        </policy>
+    </policies>
+</foreign-source>

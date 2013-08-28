@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import non-ip-snmp-primary="N" non-ip-interfaces="false" last-import="2013-03-15T09:59:06.695+01:00" foreign-source="at-router-leasedline" date-stamp="2013-03-15T09:59:06.669+01:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="at031-cisco-main-011.gls-itservices.com" foreign-id="1318582025" building="at-router-leasedline">
+        <interface snmp-primary="P" status="1" ip-addr="10.82.31.11" descr="vlan1">
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="router-leasedline"/>
+        <category name="at-router-leasedline"/>
+        <category name="at-devices"/>
+        <category name="at031-devices"/>
+    </node>
+    <node node-label="at032-cisco-main-011.gls-itservices.com" foreign-id="1318582026" building="at-router-leasedline">
+        <interface snmp-primary="P" status="1" ip-addr="10.82.32.11" descr="vlan1">
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="router-leasedline"/>
+        <category name="at-router-leasedline"/>
+        <category name="at-devices"/>
+        <category name="at032-devices"/>
+        <asset value="R1l5" name="rack"/>
+    </node>
+</model-import>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import last-import="2012-10-11T14:29:26.610+02:00" foreign-source="de001-server-adonis-phy" date-stamp="2012-10-11T12:53:15.208+02:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="de001-derz01-srv-adonis01.gls-itservices.com" foreign-id="132007989044903" building="de001-server-adonis-phy">
+        <interface status="1" snmp-primary="P" ip-addr="217.7.24.155" descr="eth0"/>
+        <category name="de001-derz01-server"/>
+        <category name="de001-dns-server"/>
+        <category name="de001-devices"/>
+        <category name="de-devices"/>
+    </node>
+    <node node-label="de001-derz01-srv-adonis02.gls-itservices.com" foreign-id="132007989044904" building="de001-server-adonis-phy">
+        <interface status="1" snmp-primary="P" ip-addr="217.7.24.156" descr="eth0"/>
+        <category name="de001-derz01-server"/>
+        <category name="de001-dns-server"/>
+        <category name="de001-devices"/>
+        <category name="de-devices"/>
+    </node>
+</model-import>

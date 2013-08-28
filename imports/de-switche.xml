@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import non-ip-snmp-primary="N" non-ip-interfaces="false" last-import="2013-01-28T17:50:06.897+01:00" foreign-source="de-switche" date-stamp="2013-01-28T16:32:23.535+01:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="de010-switch-016.gls-itservices.com" foreign-id="1318584652" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.16" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-015.gls-itservices.com" foreign-id="1318584651" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.15" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-017.gls-itservices.com" foreign-id="1318584653" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.17" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-018.gls-itservices.com" foreign-id="1318584655" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.18" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-019.gls-itservices.com" foreign-id="1318584656" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.19" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-020.gls-itservices.com" foreign-id="1318584657" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.20" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-022.gls-itservices.com" foreign-id="1318584662" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.22" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-023.gls-itservices.com" foreign-id="1318584663" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.23" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-024.gls-itservices.com" foreign-id="1318584664" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.24" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-025.gls-itservices.com" foreign-id="1318584665" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.25" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-026.gls-itservices.com" foreign-id="1318584668" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.26" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-027.gls-itservices.com" foreign-id="1318584669" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.27" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de010-switch-028.gls-itservices.com" foreign-id="1318584670" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.10.28" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de010-devices"/>
+        <category name="de-switche-ost"/>
+        <category name="de-devices-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de081-switch-015.gls-itservices.com" foreign-id="1337781804" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.15" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de081-devices"/>
+        <category name="de-switche-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-switch-016.gls-itservices.com" foreign-id="1337781805" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.16" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de081-devices"/>
+        <category name="de-switche-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-switch-017.gls-itservices.com" foreign-id="1337781806" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.17" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de081-devices"/>
+        <category name="de-switche-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-switch-018.gls-itservices.com" foreign-id="1337781807" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.18" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de081-devices"/>
+        <category name="de-switche-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-switch-021.gls-itservices.com" foreign-id="13188365621" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.21" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de081-devices"/>
+        <category name="de-switche-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-switch-019.gls-itservices.com" foreign-id="1318836562" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.19" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de081-devices"/>
+        <category name="de-switche-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-switch-020.gls-itservices.com" foreign-id="1318836563" building="de-switche">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.20" descr="vlan1"/>
+        <category name="switche"/>
+        <category name="de-devices"/>
+        <category name="de-switche"/>
+        <category name="de081-devices"/>
+        <category name="de-switche-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+</model-import>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2012-11-19T10:07:49.363+01:00" name="de001-server" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.datagram.DnsDetector" name="DNS"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.FtpDetector" name="FTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpDetector" name="HTTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpsDetector" name="HTTPS"/>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.ImapDetector" name="IMAP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.LdapDetector" name="LDAP"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.NrpeDetector" name="NRPE"/>
+        <detector class="org.opennms.netmgt.provision.detector.simple.SmtpDetector" name="SMTP"/>
+        <detector class="org.opennms.netmgt.provision.detector.snmp.SnmpDetector" name="SNMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.ssh.SshDetector" name="SSH"/>
+        <detector class="org.opennms.protocols.dhcp.detector.DhcpDetector" name="DHCP"/>
+        <detector class="org.opennms.protocols.radius.detector.RadiusAuthDetector" name="RadiusAuth">
+            <parameter value="1813" key="acctPort"/>
+            <parameter value="1812" key="authPort"/>
+            <parameter value="testing123" key="secret"/>
+            <parameter value="3" key="retries"/>
+            <parameter value="3000" key="timeout"/>
+            <parameter value="opennms" key="user"/>
+            <parameter value="opennms" key="password"/>
+        </detector>
+        <detector class="org.opennms.protocols.radius.detector.RadiusAuthDetector" name="RadiusAuth2">
+            <parameter value="1813" key="acctPort"/>
+            <parameter value="1812" key="authPort"/>
+            <parameter value="R4diU5" key="secret"/>
+            <parameter value="3" key="retries"/>
+            <parameter value="3000" key="timeout"/>
+            <parameter value="opennms" key="user"/>
+            <parameter value="opennms" key="password"/>
+        </detector>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpDetector" name="HTTP-8080">
+            <parameter value="8080" key="port"/>
+            <parameter value="3000" key="timeout"/>
+            <parameter value="1" key="retries"/>
+        </detector>
+        <detector class="org.opennms.netmgt.provision.detector.simple.HttpDetector" name="HTTP-8090">
+            <parameter value="8090" key="port"/>
+            <parameter value="3000" key="timeout"/>
+            <parameter value="1" key="retries"/>
+        </detector>
+        <detector class="org.opennms.netmgt.provision.detector.datagram.DnsDetector" name="DNS-internal">
+            <parameter value="dedpt3500.d35.gls-germany.com" key="lookup"/>
+            <parameter value="53" key="port"/>
+            <parameter value="1" key="retries"/>
+            <parameter value="5000" key="timeout"/>
+        </detector>
+        <detector class="org.opennms.netmgt.provision.detector.datagram.DnsDetector" name="DNS-adonis">
+            <parameter value="www.gls-group.eu" key="lookup"/>
+            <parameter value="53" key="port"/>
+            <parameter value="1" key="retries"/>
+            <parameter value="5000" key="timeout"/>
+        </detector>
+        <detector class="org.opennms.netmgt.provision.detector.datagram.DnsDetector" name="DNS-external">
+            <parameter value="www.google.com" key="lookup"/>
+            <parameter value="53" key="port"/>
+            <parameter value="1" key="retries"/>
+            <parameter value="5000" key="timeout"/>
+        </detector>
+    </detectors>
+    <policies>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="no_adonis_phy">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="217.7.24.155" key="ipAddress"/>
+            <parameter value="217.7.24.156" key="ipAddress"/>
+        </policy>
+    </policies>
+</foreign-source>

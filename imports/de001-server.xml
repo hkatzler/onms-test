@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import non-ip-snmp-primary="N" non-ip-interfaces="false" last-import="2013-01-29T10:59:02.774+01:00" foreign-source="de001-server" date-stamp="2013-01-29T10:57:36.392+01:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="New Node" foreign-id="1359453454295" building="de001-server"/>
+    <node node-label="de001-radius-013.gls-itservices.com" foreign-id="132007989044894" building="de001-server">
+        <interface snmp-primary="P" status="1" ip-addr="10.1.103.13" descr="eth0"/>
+        <category name="de001-server-radius"/>
+        <category name="de001-server"/>
+        <category name="de001-devices"/>
+        <category name="de-devices"/>
+    </node>
+    <node node-label="de001-radius-014.gls-itservices.com" foreign-id="132007989044895" building="de001-server">
+        <interface snmp-primary="P" status="1" ip-addr="10.1.103.14" descr="eth0"/>
+        <category name="de001-server-radius"/>
+        <category name="de001-server"/>
+        <category name="de001-devices"/>
+        <category name="de-devices"/>
+    </node>
+    <node node-label="de001-radius-002.gls-itservices.com" foreign-id="132007989044897" building="de001-server">
+        <interface snmp-primary="P" status="1" ip-addr="10.1.103.2" descr="eth0"/>
+        <category name="de001-server-radius"/>
+        <category name="de001-server"/>
+        <category name="de001-devices"/>
+        <category name="de-devices"/>
+    </node>
+    <node node-label="de001-radius-003.gls-itservices.com" foreign-id="132007989044898" building="de001-server">
+        <interface snmp-primary="P" status="1" ip-addr="10.1.103.3" descr="eth0"/>
+        <category name="de001-server-radius"/>
+        <category name="de001-server"/>
+        <category name="de001-devices"/>
+        <category name="de-devices"/>
+    </node>
+</model-import>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<destinationPaths xmlns="http://xmlns.opennms.org/xsd/destinationPaths">
+    <header>
+        <rev>1.2</rev>
+        <created>Thursday, March 14, 2013 7:02:15 AM GMT</created>
+        <mstation>localhost</mstation>
+    </header>
+    <path name="Email-Admin" initial-delay="0s">
+        <target interval="0s">
+            <name>Admin</name>
+            <command>javaEmail</command>
+        </target>
+    </path>
+    <path name="VodafoneM2M" initial-delay="0s">
+        <target interval="0s">
+            <name>ajentsch</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>aschaefer</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>cweppler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>hkatzler</name>
+            <autoNotify>on</autoNotify>
+            <command>notifyProwl</command>
+        </target>
+        <target interval="0s">
+            <name>hmoeller</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>kklein</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>rhott</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>ssotta</name>
+            <autoNotify>on</autoNotify>
+            <command>notifyProwl</command>
+        </target>
+        <target interval="0s">
+            <name>VFM2M</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+    </path>
+    <path name="de-it-sued-bayer" initial-delay="5m">
+        <target interval="0s">
+            <name>sbayer</name>
+            <autoNotify>off</autoNotify>
+            <command>javaEmail</command>
+        </target>
+    </path>
+    <path name="heiko-nodeDown" initial-delay="0s">
+        <target interval="0s">
+            <name>hkatzler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+    </path>
+    <path name="netops-nst" initial-delay="5m">
+        <target interval="0s">
+            <name>ajentsch</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>cweppler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>hkatzler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>kklein</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>rhott</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>ssotta</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>NetOps@gls-itservices.com</name>
+            <autoNotify>on</autoNotify>
+            <command>email</command>
+        </target>
+    </path>
+    <path name="netops-nst-DELAY" initial-delay="1h">
+        <target interval="0s">
+            <name>ajentsch</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>cweppler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>hkatzler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>kklein</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>rhott</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>ssotta</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>NetOps@gls-itservices.com</name>
+            <autoNotify>on</autoNotify>
+            <command>email</command>
+        </target>
+    </path>
+    <path name="netops-nst-URGENT-with-Prowl" initial-delay="5m">
+        <target interval="0s">
+            <name>ajentsch</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>cweppler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>hkatzler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+            <command>notifyProwl</command>
+        </target>
+        <target interval="0s">
+            <name>kklein</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>rhott</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>ssotta</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+            <command>notifyProwl</command>
+        </target>
+        <target interval="0s">
+            <name>NetOps@gls-itservices.com</name>
+            <autoNotify>on</autoNotify>
+            <command>email</command>
+        </target>
+    </path>
+    <path name="netops-nst-immediately" initial-delay="0s">
+        <target interval="0s">
+            <name>ajentsch</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>cweppler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>hkatzler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+            <command>notifyProwl</command>
+        </target>
+        <target interval="0s">
+            <name>kklein</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>rhott</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+        </target>
+        <target interval="0s">
+            <name>ssotta</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+            <command>notifyProwl</command>
+        </target>
+    </path>
+    <path name="opennms-admin" initial-delay="0s">
+        <target interval="0s">
+            <name>hkatzler</name>
+            <autoNotify>on</autoNotify>
+            <command>javaEmail</command>
+            <command>xmppMessage</command>
+            <command>notifyProwl</command>
+        </target>
+    </path>
+</destinationPaths>

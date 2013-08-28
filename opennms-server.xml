@@ -1,0 +1,3 @@
+<local-server server-name="OpenNMS"
+              verify-server="false">
+</local-server>

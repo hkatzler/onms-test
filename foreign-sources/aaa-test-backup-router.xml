@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2011-11-29T14:02:45.991+01:00" name="aaa-test-backup-router" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+    </detectors>
+    <policies>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="NoPublic_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="NO_PARAMETERS" key="matchBehavior"/>
+            <parameter value="~^10\..*$" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="NoPublic_2">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="NO_PARAMETERS" key="matchBehavior"/>
+            <parameter value="~^192\.168\..*$" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="NoPublic_3">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="NO_PARAMETERS" key="matchBehavior"/>
+            <parameter value="~^172\.[16-31]\..*$" key="ipAddress"/>
+        </policy>
+    </policies>
+</foreign-source>

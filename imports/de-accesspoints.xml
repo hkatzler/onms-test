@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import non-ip-snmp-primary="N" non-ip-interfaces="false" last-import="2012-12-11T11:01:36.297+01:00" foreign-source="de-accesspoints" date-stamp="2012-12-11T10:58:09.778+01:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="New Node" foreign-id="1355219888072" building="de-accesspoints"/>
+    <node node-label="de081-ap-244.gls-itservices.com" foreign-id="1337066670" building="de-accesspoints">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.244" descr="vlan1"/>
+        <category name="accesspoints"/>
+        <category name="de-devices"/>
+        <category name="de-accesspoints"/>
+        <category name="de081-devices"/>
+        <category name="de-accesspoints-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-ap-245.gls-itservices.com" foreign-id="1337066671" building="de-accesspoints">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.245" descr="vlan1"/>
+        <category name="accesspoints"/>
+        <category name="de-devices"/>
+        <category name="de-accesspoints"/>
+        <category name="de081-devices"/>
+        <category name="de-accesspoints-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-ap-246.gls-itservices.com" foreign-id="1337066672" building="de-accesspoints">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.246" descr="vlan1"/>
+        <category name="accesspoints"/>
+        <category name="de-devices"/>
+        <category name="de-accesspoints"/>
+        <category name="de081-devices"/>
+        <category name="de-accesspoints-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-ap-248.gls-itservices.com" foreign-id="1338354566" building="de-accesspoints">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.248" descr="vlan1"/>
+        <category name="accesspoints"/>
+        <category name="de-devices"/>
+        <category name="de-accesspoints"/>
+        <category name="de081-devices"/>
+        <category name="de-accesspoints-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-ap-249.gls-itservices.com" foreign-id="1338354567" building="de-accesspoints">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.249" descr="vlan1"/>
+        <category name="accesspoints"/>
+        <category name="de-devices"/>
+        <category name="de-accesspoints"/>
+        <category name="de081-devices"/>
+        <category name="de-accesspoints-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+    <node node-label="de081-ap-251.gls-itservices.com" foreign-id="13188358142" building="de-accesspoints">
+        <interface snmp-primary="P" status="1" ip-addr="10.2.81.251" descr="vlan1"/>
+        <category name="accesspoints"/>
+        <category name="de-devices"/>
+        <category name="de-accesspoints"/>
+        <category name="de081-devices"/>
+        <category name="de-accesspoints-sued"/>
+        <category name="de-devices-sued"/>
+    </node>
+</model-import>

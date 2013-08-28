@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportsList>
+    <Report id="3" title="AT Tunnel Interfaces"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="" resourceId="node[2022].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2019].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2018].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2023].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2021].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2024].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2025].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2020].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2026].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2027].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2028].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="14" title="BE Tunnel Interfaces"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="" resourceId="node[2343].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2314].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2311].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2306].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2310].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2312].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2313].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2315].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2309].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2308].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="1" title="DE Tunnel Interfaces"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="" resourceId="node[1800].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[1801].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2062].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2088].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2032].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2029].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2030].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2034].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2031].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2067].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2033].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2039].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2037].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2035].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2040].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2038].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2036].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2041].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2043].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2042].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2045].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2044].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2046].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2048].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2047].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2049].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2050].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2051].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2084].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2052].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2053].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2054].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2055].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2057].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2058].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2059].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2061].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2087].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2060].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2063].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2064].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2066].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2089].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2065].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2068].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2070].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2069].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2077].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2071].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2073].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2075].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2090].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2072].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2074].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2076].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2079].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2078].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2081].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2085].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2152].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="10" title="Eaton USV01 RZ Neuenstein"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="3">
+        <Graph title="Eaton USV 01 DERZ01"
+            resourceId="node[2213].nodeSnmp[]" timespan="7_day" graphtype="mib2.ups-charge"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-time"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-load"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-power"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-acvolt"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-accurrent"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-powerfactor"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-freq"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battvolt"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battamp"/>
+    </Report>
+    <Report id="11" title="Eaton USV02 RZ Neuenstein"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="3">
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-charge"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-time"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-load"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-power"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-acvolt"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-accurrent"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-powerfactor"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-freq"/>
+        <Graph title="" resourceId="node[2212].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battvolt"/>
+        <Graph title="" resourceId="node[2213].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battamp"/>
+    </Report>
+    <Report id="12" title="Eaton USV03 RZ Neuenstein"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="3">
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-time"/>
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-load"/>
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-power"/>
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-acvolt"/>
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-powerfactor"/>
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-freq"/>
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battvolt"/>
+        <Graph title="" resourceId="node[2214].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battamp"/>
+    </Report>
+    <Report id="13" title="Eaton USV04 RZ Neuenstein"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="3">
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-charge"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-time"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-load"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-acvolt"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-accurrent"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-powerfactor"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-freq"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battvolt"/>
+        <Graph title="" resourceId="node[2211].nodeSnmp[]"
+            timespan="7_day" graphtype="mib2.ups-battamp"/>
+    </Report>
+    <Report id="17" title="Errors WAN Interface - DE"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="" resourceId="node[2062].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2029].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="" resourceId="node[2067].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2033].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2040].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2038].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2036].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2035].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2043].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2042].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2045].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2046].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2048].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2050].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2051].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2084].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2052].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2057].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2058].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2070].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2075].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2076].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2081].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2072].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2032].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2068].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2088].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2069].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2039].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2055].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2090].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2071].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2066].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2030].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2034].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2031].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2044].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2041].interfaceSnmp[Fa0_1]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2053].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+        <Graph title="Cisco Interface Errors"
+            resourceId="node[2078].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="cisco.iferrors"/>
+    </Report>
+    <Report id="15" title="GLS FTP Server-Traffic"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="Bits In/Out"
+            resourceId="node[3982].interfaceSnmp[eth0]" timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title="Bits In/Out"
+            resourceId="node[3984].interfaceSnmp[eth0]" timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title="Bits In/Out (High Speed)"
+            resourceId="node[3981].interfaceSnmp[eth0-9c8e99f91cc0]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="Bits In/Out (High Speed)"
+            resourceId="node[3985].interfaceSnmp[eth0-d485645fe370]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+        <Graph title="Bits In/Out (High Speed)"
+            resourceId="node[3983].interfaceSnmp[eth0-b499babc5c38]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="18" title="ICMP Response Time - BE Tunnel"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title=""
+            resourceId="node[2314].responseTime[172.31.6.61]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title=""
+            resourceId="node[2310].responseTime[172.31.6.72]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title=""
+            resourceId="node[2306].responseTime[172.31.6.68]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title=""
+            resourceId="node[2308].responseTime[172.31.6.82]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="StrafePing"
+            resourceId="node[2343].responseTime[172.31.6.3]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="StrafePing"
+            resourceId="node[2313].responseTime[172.31.6.74]"
+            timespan="1_day" graphtype="strafeping"/>
+    </Report>
+    <Report id="16" title="ICMP Response Time - DE Tunnel"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="DE007"
+            resourceId="node[2062].responseTime[172.31.1.7]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE010"
+            resourceId="node[2088].responseTime[172.31.1.10]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE011"
+            resourceId="node[2032].responseTime[172.31.1.11]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE012"
+            resourceId="node[2029].responseTime[172.31.1.12]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE013"
+            resourceId="node[2030].responseTime[172.31.1.13]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE014"
+            resourceId="node[2034].responseTime[172.31.1.14]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE015"
+            resourceId="node[2031].responseTime[172.31.1.15]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE016"
+            resourceId="node[2067].responseTime[172.31.1.16]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE017"
+            resourceId="node[2033].responseTime[172.31.1.17]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE018"
+            resourceId="node[2039].responseTime[172.31.1.18]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE019"
+            resourceId="node[2037].responseTime[172.31.1.19]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE033"
+            resourceId="node[2042].responseTime[172.31.1.33]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE036"
+            resourceId="node[2044].responseTime[172.31.1.36]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE036"
+            resourceId="node[2044].responseTime[172.31.1.36]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE037"
+            resourceId="node[2046].responseTime[172.31.1.37]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE044"
+            resourceId="node[3428].responseTime[172.31.1.44]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE041"
+            resourceId="node[2047].responseTime[172.31.1.41]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE047"
+            resourceId="node[2084].responseTime[172.31.1.47]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE067"
+            resourceId="node[3967].responseTime[172.31.1.67]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE072"
+            resourceId="node[2066].responseTime[172.31.1.72]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE079"
+            resourceId="node[2071].responseTime[172.31.1.79]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE080"
+            resourceId="node[2073].responseTime[172.31.1.80]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE081"
+            resourceId="node[2075].responseTime[172.31.1.81]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE082"
+            resourceId="node[2090].responseTime[172.31.1.82]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE083"
+            resourceId="node[2072].responseTime[172.31.1.83]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE084"
+            resourceId="node[2083].responseTime[172.31.1.84]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE085"
+            resourceId="node[2074].responseTime[172.31.1.85]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE086"
+            resourceId="node[2076].responseTime[172.31.1.86]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE089"
+            resourceId="node[2081].responseTime[172.31.1.89]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE066"
+            resourceId="node[2061].responseTime[172.31.1.66]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE068"
+            resourceId="node[2060].responseTime[172.31.1.68]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE070"
+            resourceId="node[2063].responseTime[172.31.1.70]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE071"
+            resourceId="node[2064].responseTime[172.31.1.71]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE073"
+            resourceId="node[2089].responseTime[172.31.1.73]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE074"
+            resourceId="node[2065].responseTime[172.31.1.74]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE075"
+            resourceId="node[2068].responseTime[172.31.1.75]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE076"
+            resourceId="node[2070].responseTime[172.31.1.76]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE077"
+            resourceId="node[2069].responseTime[172.31.1.77]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE078"
+            resourceId="node[2077].responseTime[172.31.1.78]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE020"
+            resourceId="node[2035].responseTime[172.31.1.20]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE023"
+            resourceId="node[2040].responseTime[172.31.1.23]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE025"
+            resourceId="node[2038].responseTime[172.31.1.25]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE028"
+            resourceId="node[2036].responseTime[172.31.1.28]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE029"
+            resourceId="node[2041].responseTime[172.31.1.29]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE030"
+            resourceId="node[2043].responseTime[172.31.1.30]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE035"
+            resourceId="node[2045].responseTime[172.31.1.35]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE045"
+            resourceId="node[2050].responseTime[172.31.1.45]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE048"
+            resourceId="node[2052].responseTime[172.31.1.48]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE054"
+            resourceId="node[2055].responseTime[172.31.1.54]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE060"
+            resourceId="node[2058].responseTime[172.31.1.60]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE063"
+            resourceId="node[2059].responseTime[172.31.1.63]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE069"
+            resourceId="node[3947].responseTime[172.31.1.69]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE087"
+            resourceId="node[2079].responseTime[172.31.1.87]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE088"
+            resourceId="node[2078].responseTime[172.31.1.88]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE040"
+            resourceId="node[2048].responseTime[172.31.1.40]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE042"
+            resourceId="node[2049].responseTime[172.31.1.42]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE046"
+            resourceId="node[2051].responseTime[172.31.1.46]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE049"
+            resourceId="node[2053].responseTime[172.31.1.49]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE050"
+            resourceId="node[2054].responseTime[172.31.1.50]"
+            timespan="1_day" graphtype="strafeping"/>
+        <Graph title="DE056"
+            resourceId="node[2057].responseTime[172.31.1.56]"
+            timespan="1_day" graphtype="strafeping"/>
+    </Report>
+    <Report id="2" title="IE Tunnel Interfaces"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="" resourceId="node[2001].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2002].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2004].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2003].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2005].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2006].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="8" title="Internet Traffic über PaloAlto"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="3">
+        <Graph title="PA01-Verb. Eth 1/1 zu Switch 10.3.80.15"
+            resourceId="node[2238].interfaceSnmp[ethernet1_1]"
+            timespan="7_day" graphtype="mib2.bits"/>
+        <Graph title="PA01-Verb. Eth 1/2 zu Switch 10.3.80.16"
+            resourceId="node[2238].interfaceSnmp[ethernet1_2]"
+            timespan="7_day" graphtype="mib2.bits"/>
+        <Graph title="Verb. 10.3.80.16 zu PA01 Ethernet 1/2"
+            resourceId="node[1839].interfaceSnmp[22]" timespan="7_day" graphtype="mib2.bits"/>
+        <Graph title="Verb. 10.3.80.15 zu PA01 Ethernet 1/1"
+            resourceId="node[1840].interfaceSnmp[Fa0_22]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="Verbindung 10.3.80.15 zu proxylb01"
+            resourceId="node[1840].interfaceSnmp[Fa0_7]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="Verbindung 10.3.81.15 zu proxylb01"
+            resourceId="node[1841].interfaceSnmp[Fa0_16]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="Verbindung 10.3.81.15 zu Proxy21"
+            resourceId="node[1841].interfaceSnmp[Fa0_13]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="Verbindung 10.3.81.15 zu Proxy22"
+            resourceId="node[1841].interfaceSnmp[Fa0_17]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="Verbindung 10.3.81.15 zu Proxy23"
+            resourceId="node[1841].interfaceSnmp[Fa0_18]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="Verbindung 10.3.81.15 zu Proxy20-Test"
+            resourceId="node[1841].interfaceSnmp[Fa0_14]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="9" title="Internet komplett 300Mbit und 155Mbit"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="3">
+        <Graph title="155 Mbit/s am Switch 217.7.24.20"
+            resourceId="node[1593].interfaceSnmp[24]" timespan="1_day" graphtype="mib2.bits"/>
+        <Graph title="300 MBit/s am Switch 217.7.24.21, Port 2"
+            resourceId="node[1590].interfaceSnmp[gi28]" timespan="1_day" graphtype="mib2.bits"/>
+    </Report>
+    <Report id="5" title="NL Tunnel Interfaces"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="" resourceId="node[2265].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2341].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2253].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2261].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2258].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2254].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2257].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2259].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2260].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2255].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2256].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2263].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2267].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2264].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2266].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2268].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="0" title="OpennNMS Server" show_timespan_button="true"
+        show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="CPU Usage" resourceId="node[1632].nodeSnmp[]"
+            timespan="7_day" graphtype="netsnmp.cpuUsageFull"/>
+        <Graph title="CPU Statistics" resourceId="node[1632].nodeSnmp[]"
+            timespan="7_day" graphtype="netsnmp.cpuStatsFull"/>
+        <Graph title="System Memory Stats"
+            resourceId="node[1632].nodeSnmp[]" timespan="7_day" graphtype="netsnmp.memStats"/>
+        <Graph title="Load Average" resourceId="node[1632].nodeSnmp[]"
+            timespan="7_day" graphtype="netsnmp.loadavg"/>
+    </Report>
+    <Report id="6" title="PL Tunnel Interfaces"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="2">
+        <Graph title="" resourceId="node[2660].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2654].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2657].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2661].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2655].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2665].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2663].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2664].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2656].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2662].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2658].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2650].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2659].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2652].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2653].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2668].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2669].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2666].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2715].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2675].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2677].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2674].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2672].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2671].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2679].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2670].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2673].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2678].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2681].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2680].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2676].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+        <Graph title="" resourceId="node[2682].interfaceSnmp[Tu0]"
+            timespan="7_day" graphtype="mib2.HCbits"/>
+    </Report>
+    <Report id="7" title="Vodafone M2M-Traffic DMZ Interface"
+        show_timespan_button="true" show_graphtype_button="true" graphs_per_line="1">
+        <Graph title="DMZ Interface"
+            resourceId="node[1810].interfaceSnmp[Fa0_0]"
+            timespan="1_day" graphtype="mib2.HCbits"/>
+    </Report>
+</ReportsList>

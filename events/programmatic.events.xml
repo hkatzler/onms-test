@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event>
+        <uei>GLS/custom/dskabove95</uei>
+        <event-label>User-defined threshold event GLS/custom/dskabove95</event-label>
+        <descr>Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]</descr>
+        <logmsg dest="logndisplay">Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+    </event>
+    <event>
+        <uei>GLS/custom/dskabove85</uei>
+        <event-label>User-defined threshold event GLS/custom/dskabove85</event-label>
+        <descr>Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]</descr>
+        <logmsg dest="logndisplay">Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+    </event>
+    <event>
+        <uei>GLS/custom/lowThresholdExceededVF</uei>
+        <event-label>User-defined threshold event GLS/custom/lowThresholdExceededVF</event-label>
+        <descr>Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]</descr>
+        <logmsg dest="logndisplay">Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+    </event>
+    <event>
+        <uei>GLS/custom/lowThresholdRearmedVF</uei>
+        <event-label>User-defined threshold event GLS/custom/lowThresholdRearmedVF</event-label>
+        <descr>Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]</descr>
+        <logmsg dest="logndisplay">Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+    </event>
+    <event>
+        <uei>GLS/custom/ExVF</uei>
+        <event-label>User-defined threshold event GLS/custom/ExVF</event-label>
+        <descr>Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]</descr>
+        <logmsg dest="logndisplay">Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+    </event>
+    <event>
+        <uei>GLS/custom/ReVF</uei>
+        <event-label>User-defined threshold event GLS/custom/ReVF</event-label>
+        <descr>Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]</descr>
+        <logmsg dest="logndisplay">Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+    </event>
+    <event>
+        <uei>GLS/custom/thresholds/strafePing-High</uei>
+        <event-label>User-defined threshold event GLS/custom/thresholds/strafePing-High</event-label>
+        <descr>High threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</descr>
+        <logmsg dest="logndisplay">High threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+        <alarm-data
+            reduction-key="%uei%:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%"
+            alarm-type="1" auto-clean="false"/>
+    </event>
+    <event>
+        <uei>GLS/custom/thresholds/strafePing-Rearm</uei>
+        <event-label>User-defined threshold event GLS/custom/thresholds/strafePing-Rearm</event-label>
+        <descr>High threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</descr>
+        <logmsg dest="logndisplay">High threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Normal</severity>
+        <alarm-data
+            reduction-key="%uei%:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%"
+            alarm-type="2"
+            clear-key="GLS/custom/thresholds/strafePing-High:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%" auto-clean="false"/>
+    </event>
+    <event>
+        <uei>GLS/custom/thresholds/strafePingPackLoss-High</uei>
+        <event-label>User-defined threshold event GLS/custom/thresholds/strafePingPackLoss-High</event-label>
+        <descr>Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</descr>
+        <logmsg dest="logndisplay">Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+        <alarm-data
+            reduction-key="%uei%:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%"
+            alarm-type="1" auto-clean="false"/>
+    </event>
+    <event>
+        <uei>GLS/custom/thresholds/strafePingPackLoss-Rearm</uei>
+        <event-label>User-defined threshold event GLS/custom/thresholds/strafePingPackLoss-Rearm</event-label>
+        <descr>Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</descr>
+        <logmsg dest="logndisplay">Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Normal</severity>
+        <alarm-data
+            reduction-key="%uei%:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%"
+            alarm-type="2"
+            clear-key="GLS/custom/thresholds/strafePingPackLoss-High:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%" auto-clean="false"/>
+    </event>
+    <event>
+        <uei>GLS/custom/thresholds/strafePingLatency-High</uei>
+        <event-label>User-defined threshold event GLS/custom/thresholds/strafePingLatency-High</event-label>
+        <descr>Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</descr>
+        <logmsg dest="logndisplay">Threshold exceeded for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Warning</severity>
+        <alarm-data
+            reduction-key="%uei%:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%"
+            alarm-type="1" auto-clean="false"/>
+    </event>
+    <event>
+        <uei>GLS/custom/thresholds/strafePingLatency-Rearm</uei>
+        <event-label>User-defined threshold event GLS/custom/thresholds/strafePingLatency-Rearm</event-label>
+        <descr>Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</descr>
+        <logmsg dest="logndisplay">Threshold rearmed for %service% datasource %parm[ds]% on interface %interface%, parms: %parm[all]%</logmsg>
+        <severity>Normal</severity>
+        <alarm-data
+            reduction-key="%uei%:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%"
+            alarm-type="2"
+            clear-key="GLS/custom/thresholds/strafePingLatency-High:%dpname%:%nodeid%:%interface%:%parm[ds]%:%parm[threshold]%:%parm[trigger]%:%parm[rearm]%:%parm[label]%" auto-clean="false"/>
+    </event>
+</events>

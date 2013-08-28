@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model-import last-import="2012-05-14T13:56:58.021+02:00" foreign-source="de-router-leasedline" date-stamp="2012-05-14T13:56:57.804+02:00" xmlns="http://xmlns.opennms.org/xsd/config/model-import">
+    <node node-label="de010-cisco-main-011.gls-itservices.com" foreign-id="1318578004" building="de-router-leasedline">
+        <interface status="1" snmp-primary="P" ip-addr="10.2.10.11" descr="vlan1">
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="router-leasedline"/>
+        <category name="de-router-leasedline"/>
+        <category name="de-devices"/>
+        <category name="de010-devices"/>
+        <category name="de-router-leasedline-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de011-cisco-main-011.gls-itservices.com" foreign-id="1318578005" building="de-router-leasedline">
+        <interface status="1" snmp-primary="P" ip-addr="10.2.11.11" descr="vlan1">
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="router-leasedline"/>
+        <category name="de-router-leasedline"/>
+        <category name="de-devices"/>
+        <category name="de011-devices"/>
+        <category name="de-router-leasedline-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+    <node node-label="de012-cisco-main-011.gls-itservices.com" foreign-id="1318578006" building="de-router-leasedline">
+        <interface status="1" snmp-primary="P" ip-addr="10.2.12.11" descr="vlan1">
+            <monitored-service service-name="SNMP"/>
+        </interface>
+        <category name="router-leasedline"/>
+        <category name="de-router-leasedline"/>
+        <category name="de-devices"/>
+        <category name="de012-devices"/>
+        <category name="de-router-leasedline-ost"/>
+        <category name="de-devices-ost"/>
+    </node>
+</model-import>

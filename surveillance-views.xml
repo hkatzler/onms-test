@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<surveillance-view-configuration xmlns:this="http://www.opennms.org/xsd/config/surveillance-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opennms.org/xsd/config/surveillance-views http://www.opennms.org/xsd/config/surveillance-views.xsd" default-view="default">
+  <views>
+    <view name="default" refresh-seconds="300">
+      <rows>
+        <row-def label="de-devices">
+          <category name="de-devices"/>
+        </row-def>
+        <row-def label="de001-devices">
+          <category name="de001-devices"/>
+        </row-def>
+        <row-def label="at-devices">
+          <category name="at-devices"/>
+        </row-def>
+        <row-def label="ie-devices">
+          <category name="ie-devices"/>
+        </row-def>
+        <row-def label="nl-devices">
+          <category name="nl-devices"/>
+        </row-def>
+        <row-def label="be-devices">
+          <category name="be-devices"/>
+        </row-def>
+        <row-def label="lu-devices">
+          <category name="lu-devices"/>
+        </row-def>
+        <row-def label="pl-devices">
+          <category name="pl-devices"/>
+        </row-def>
+        <row-def label="pt-devices">
+          <category name="pt-devices"/>
+        </row-def>
+        <row-def label="es-devices">
+          <category name="es-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="router-backup"/>
+        </column-def>
+        <column-def label="Router-Test-de001">
+          <category name="de001-router-test"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="switche"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="accesspoints"/>
+        </column-def>
+        <column-def label="Router-Virtual">
+          <category name="router-virtual"/>
+        </column-def>
+        <column-def label="Server">
+          <category name="de001-derz01-server"/>
+        </column-def>
+        <column-def label="Environment">
+          <category name="de001-environment"/>
+          <category name="de001-environment-derz01"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="at-it" refresh-seconds="300">
+      <rows>
+        <row-def label="at031-devices">
+          <category name="at031-devices"/>
+        </row-def>
+        <row-def label="at032-devices">
+          <category name="at032-devices"/>
+        </row-def>
+        <row-def label="at034-devices">
+          <category name="at034-devices"/>
+        </row-def>
+        <row-def label="at038-devices">
+          <category name="at038-devices"/>
+        </row-def>
+        <row-def label="at039-devices">
+          <category name="at039-devices"/>
+        </row-def>
+        <row-def label="at051-devices">
+          <category name="at051-devices"/>
+        </row-def>
+        <row-def label="at052-devices">
+          <category name="at052-devices"/>
+        </row-def>
+        <row-def label="at053-devices">
+          <category name="at053-devices"/>
+        </row-def>
+        <row-def label="at057-devices">
+          <category name="at057-devices"/>
+        </row-def>
+        <row-def label="at058-devices">
+          <category name="at058-devices"/>
+        </row-def>
+        <row-def label="at059-devices">
+          <category name="at059-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="at-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="at-router-backup"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="at-switche"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="at-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="nl-it" refresh-seconds="300">
+      <rows>
+        <row-def label="nl240-devices-hq">
+          <category name="nl240-devices-hq"/>
+        </row-def>
+        <row-def label="nl009-devices">
+          <category name="nl009-devices"/>
+        </row-def>
+        <row-def label="nl010-devices">
+          <category name="nl010-devices"/>
+        </row-def>
+        <row-def label="nl018-devices">
+          <category name="nl018-devices"/>
+        </row-def>
+        <row-def label="nl019-devices">
+          <category name="nl019-devices"/>
+        </row-def>
+        <row-def label="nl025-devices">
+          <category name="nl025-devices"/>
+        </row-def>
+        <row-def label="nl035-devices">
+          <category name="nl035-devices"/>
+        </row-def>
+        <row-def label="nl036-devices">
+          <category name="nl036-devices"/>
+        </row-def>
+        <row-def label="nl041-devices">
+          <category name="nl041-devices"/>
+        </row-def>
+        <row-def label="nl042-devices">
+          <category name="nl042-devices"/>
+        </row-def>
+        <row-def label="nl044-devices">
+          <category name="nl044-devices"/>
+        </row-def>
+        <row-def label="nl052-devices">
+          <category name="nl052-devices"/>
+        </row-def>
+        <row-def label="nl060-devices">
+          <category name="nl060-devices"/>
+        </row-def>
+        <row-def label="nl061-devices">
+          <category name="nl061-devices"/>
+        </row-def>
+        <row-def label="nl065-devices">
+          <category name="nl065-devices"/>
+        </row-def>
+        <row-def label="nl076-devices">
+          <category name="nl076-devices"/>
+        </row-def>
+        <row-def label="nl079-devices">
+          <category name="nl079-devices"/>
+        </row-def>
+        <row-def label="nl080-devices">
+          <category name="nl080-devices"/>
+        </row-def>
+        <row-def label="nl097-devices">
+          <category name="nl097-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="nl-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="nl-router-backup"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="nl-switche"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="nl-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="be-it" refresh-seconds="300">
+      <rows>
+        <row-def label="be003-devices-hq">
+          <category name="be003-devices-hq"/>
+        </row-def>
+        <row-def label="be061-devices">
+          <category name="be061-devices"/>
+        </row-def>
+        <row-def label="be067-devices">
+          <category name="be067-devices"/>
+        </row-def>
+        <row-def label="be068-devices">
+          <category name="be068-devices"/>
+        </row-def>
+        <row-def label="be069-devices">
+          <category name="be069-devices"/>
+        </row-def>
+        <row-def label="be071-devices">
+          <category name="be071-devices"/>
+        </row-def>
+        <row-def label="be072-devices">
+          <category name="be072-devices"/>
+        </row-def>
+        <row-def label="be073-devices">
+          <category name="be073-devices"/>
+        </row-def>
+        <row-def label="be074-devices">
+          <category name="be074-devices"/>
+        </row-def>
+        <row-def label="be076-devices">
+          <category name="be076-devices"/>
+        </row-def>
+        <row-def label="be078-devices">
+          <category name="be078-devices"/>
+        </row-def>
+        <row-def label="be082-devices">
+          <category name="be082-devices"/>
+        </row-def>
+        <row-def label="be099-devices">
+          <category name="be099-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="be-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="be-router-backup"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="be-switche"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="be-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="pl-it" refresh-seconds="300">
+      <rows>
+        <row-def label="pl010-devices">
+          <category name="pl010-devices"/>
+        </row-def>
+        <row-def label="pl015-devices">
+          <category name="pl015-devices"/>
+        </row-def>
+        <row-def label="pl019-devices">
+          <category name="pl019-devices"/>
+        </row-def>
+        <row-def label="pl025-devices">
+          <category name="pl025-devices"/>
+        </row-def>
+        <row-def label="pl026-devices">
+          <category name="pl026-devices"/>
+        </row-def>
+        <row-def label="pl029-devices">
+          <category name="pl029-devices"/>
+        </row-def>
+        <row-def label="pl030-devices">
+          <category name="pl030-devices"/>
+        </row-def>
+        <row-def label="pl033-devices">
+          <category name="pl033-devices"/>
+        </row-def>
+        <row-def label="pl034-devices">
+          <category name="pl034-devices"/>
+        </row-def>
+        <row-def label="pl035-devices">
+          <category name="pl035-devices"/>
+        </row-def>
+        <row-def label="pl042-devices">
+          <category name="pl042-devices"/>
+        </row-def>
+        <row-def label="pl043-devices">
+          <category name="pl043-devices"/>
+        </row-def>
+        <row-def label="pl044-devices">
+          <category name="pl044-devices"/>
+        </row-def>
+        <row-def label="pl045-devices">
+          <category name="pl045-devices"/>
+        </row-def>
+        <row-def label="pl050-devices">
+          <category name="pl050-devices"/>
+        </row-def>
+        <row-def label="pl051-devices">
+          <category name="pl051-devices"/>
+        </row-def>
+        <row-def label="pl054-devices">
+          <category name="pl054-devices"/>
+        </row-def>
+        <row-def label="pl059-devices">
+          <category name="pl059-devices"/>
+        </row-def>
+        <row-def label="pl060-devices">
+          <category name="pl060-devices"/>
+        </row-def>
+        <row-def label="pl062-devices">
+          <category name="pl062-devices"/>
+        </row-def>
+        <row-def label="pl063-devices">
+          <category name="pl063-devices"/>
+        </row-def>
+        <row-def label="pl064-devices">
+          <category name="pl064-devices"/>
+        </row-def>
+        <row-def label="pl065-devices">
+          <category name="pl065-devices"/>
+        </row-def>
+        <row-def label="pl066-devices">
+          <category name="pl066-devices"/>
+        </row-def>
+        <row-def label="pl070-devices">
+          <category name="pl070-devices"/>
+        </row-def>
+        <row-def label="pl075-devices">
+          <category name="pl075-devices"/>
+        </row-def>
+        <row-def label="pl077-devices">
+          <category name="pl077-devices"/>
+        </row-def>
+        <row-def label="pl080-devices">
+          <category name="pl080-devices"/>
+        </row-def>
+        <row-def label="pl083-devices">
+          <category name="pl083-devices"/>
+        </row-def>
+        <row-def label="pl085-devices">
+          <category name="pl085-devices"/>
+        </row-def>
+        <row-def label="pl087-devices">
+          <category name="pl087-devices"/>
+        </row-def>
+        <row-def label="pl090-devices">
+          <category name="pl090-devices"/>
+        </row-def>
+        <row-def label="pl091-devices">
+          <category name="pl091-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="pl-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="pl-router-backup"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="pl-switche"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="pl-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="es-it" refresh-seconds="300">
+      <rows>
+        <row-def label="es031-devices">
+          <category name="es031-devices"/>
+        </row-def>
+        <row-def label="es032-devices">
+          <category name="es032-devices"/>
+        </row-def>
+        <row-def label="es036-devices">
+          <category name="es036-devices"/>
+        </row-def>
+        <row-def label="es037-devices">
+          <category name="es037-devices"/>
+        </row-def>
+        <row-def label="es038-devices">
+          <category name="es038-devices"/>
+        </row-def>
+        <row-def label="es039-devices">
+          <category name="es039-devices"/>
+        </row-def>
+        <row-def label="es041-devices">
+          <category name="es041-devices"/>
+        </row-def>
+        <row-def label="es046-devices">
+          <category name="es046-devices"/>
+        </row-def>
+        <row-def label="es091-devices">
+          <category name="es091-devices"/>
+        </row-def>
+        <row-def label="es092-devices">
+          <category name="es092-devices"/>
+        </row-def>
+        <row-def label="es093-devices">
+          <category name="es093-devices"/>
+        </row-def>
+        <row-def label="es095-devices">
+          <category name="es095-devices"/>
+        </row-def>
+        <row-def label="es096-devices">
+          <category name="es096-devices"/>
+        </row-def>
+        <row-def label="es097-devices">
+          <category name="es097-devices"/>
+        </row-def>
+        <row-def label="es099-devices">
+          <category name="es099-devices"/>
+        </row-def>
+        <row-def label="es0201-devices">
+          <category name="es201-devices"/>
+        </row-def>
+        <row-def label="es0203-devices">
+          <category name="es203-devices"/>
+        </row-def>
+        <row-def label="es205-devices">
+          <category name="es205-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="es-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="es-router-backup"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="at-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="pt-it" refresh-seconds="300">
+      <rows>
+        <row-def label="pt009-devices">
+          <category name="pt009-devices"/>
+        </row-def>
+        <row-def label="pt020-devices">
+          <category name="pt020-devices"/>
+        </row-def>
+        <row-def label="pt021-devices">
+          <category name="pt021-devices"/>
+        </row-def>
+        <row-def label="pt022-devices">
+          <category name="pt022-devices"/>
+        </row-def>
+        <row-def label="pt023-devices">
+          <category name="pt023-devices"/>
+        </row-def>
+        <row-def label="pt024-devices">
+          <category name="pt024-devices"/>
+        </row-def>
+        <row-def label="pt092-devices">
+          <category name="pt092-devices"/>
+        </row-def>
+        <row-def label="pt094-devices">
+          <category name="pt094-devices"/>
+        </row-def>
+        <row-def label="pt095-devices">
+          <category name="pt095-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="pt-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="pt-router-backup"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="pt-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="fr-it" refresh-seconds="300">
+      <rows>
+        <row-def label="es031-devices">
+          <category name="es031-devices"/>
+        </row-def>
+        <row-def label="es032-devices">
+          <category name="es032-devices"/>
+        </row-def>
+        <row-def label="es036-devices">
+          <category name="es036-devices"/>
+        </row-def>
+        <row-def label="es037-devices">
+          <category name="es037-devices"/>
+        </row-def>
+        <row-def label="es038-devices">
+          <category name="es038-devices"/>
+        </row-def>
+        <row-def label="es039-devices">
+          <category name="es039-devices"/>
+        </row-def>
+        <row-def label="es041-devices">
+          <category name="es041-devices"/>
+        </row-def>
+        <row-def label="es046-devices">
+          <category name="es046-devices"/>
+        </row-def>
+        <row-def label="es091-devices">
+          <category name="es091-devices"/>
+        </row-def>
+        <row-def label="es092-devices">
+          <category name="es092-devices"/>
+        </row-def>
+        <row-def label="es093-devices">
+          <category name="es093-devices"/>
+        </row-def>
+        <row-def label="es095-devices">
+          <category name="es095-devices"/>
+        </row-def>
+        <row-def label="es096-devices">
+          <category name="es096-devices"/>
+        </row-def>
+        <row-def label="es097-devices">
+          <category name="es097-devices"/>
+        </row-def>
+        <row-def label="es099-devices">
+          <category name="es099-devices"/>
+        </row-def>
+        <row-def label="es0201-devices">
+          <category name="es201-devices"/>
+        </row-def>
+        <row-def label="es0203-devices">
+          <category name="es203-devices"/>
+        </row-def>
+        <row-def label="es205-devices">
+          <category name="es205-devices"/>
+        </row-def>
+        <row-def label="pt009-devices">
+          <category name="pt009-devices"/>
+        </row-def>
+        <row-def label="pt020-devices">
+          <category name="pt020-devices"/>
+        </row-def>
+        <row-def label="pt021-devices">
+          <category name="pt021-devices"/>
+        </row-def>
+        <row-def label="pt022-devices">
+          <category name="pt022-devices"/>
+        </row-def>
+        <row-def label="pt023-devices">
+          <category name="pt023-devices"/>
+        </row-def>
+        <row-def label="pt024-devices">
+          <category name="pt024-devices"/>
+        </row-def>
+        <row-def label="pt092-devices">
+          <category name="pt092-devices"/>
+        </row-def>
+        <row-def label="pt094-devices">
+          <category name="pt094-devices"/>
+        </row-def>
+        <row-def label="pt095-devices">
+          <category name="pt095-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="pt-router-leasedline"/>
+          <category name="es-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="pt-router-backup"/>
+          <category name="es-router-backup"/>
+         </column-def>
+        <column-def label="Accesspoints">
+          <category name="pt-accesspoints"/>
+          <category name="es-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="ie-it" refresh-seconds="300">
+      <rows>
+        <row-def label="ie021-devices">
+          <category name="ie021-devices"/>
+        </row-def>
+        <row-def label="ie022-devices">
+          <category name="ie022-devices"/>
+        </row-def>
+        <row-def label="ie024-devices">
+          <category name="ie024-devices"/>
+        </row-def>
+        <row-def label="ie026-devices">
+          <category name="ie026-devices"/>
+        </row-def>
+        <row-def label="ie027-devices">
+          <category name="ie027-devices"/>
+        </row-def>
+        <row-def label="ie065-devices">
+          <category name="ie065-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="ie-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="ie-router-backup"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="ie-switche"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="ie-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="de-it-ost" refresh-seconds="300">
+      <rows>
+        <row-def label="de010-devices">
+          <category name="de010-devices"/>
+        </row-def>
+        <row-def label="de011-devices">
+          <category name="de011-devices"/>
+        </row-def>
+        <row-def label="de012-devices">
+          <category name="de012-devices"/>
+        </row-def>
+        <row-def label="de013-devices">
+          <category name="de013-devices"/>
+        </row-def>
+        <row-def label="de014-devices">
+          <category name="de014-devices"/>
+        </row-def>
+        <row-def label="de015-devices">
+          <category name="de015-devices"/>
+        </row-def>
+        <row-def label="de016-devices">
+          <category name="de016-devices"/>
+        </row-def>
+        <row-def label="de017-devices">
+          <category name="de017-devices"/>
+        </row-def>
+        <row-def label="de018-devices">
+          <category name="de018-devices"/>
+        </row-def>
+        <row-def label="de019-devices">
+          <category name="de019-devices"/>
+        </row-def>
+        <row-def label="de033-devices">
+          <category name="de033-devices"/>
+        </row-def>
+        <row-def label="de036-devices">
+          <category name="de036-devices"/>
+        </row-def>
+        <row-def label="de037-devices">
+          <category name="de037-devices"/>
+        </row-def>
+        <row-def label="ie021-devices">
+          <category name="ie021-devices"/>
+        </row-def>
+        <row-def label="ie022-devices">
+          <category name="ie022-devices"/>
+        </row-def>
+        <row-def label="ie024-devices">
+          <category name="ie024-devices"/>
+        </row-def>
+        <row-def label="ie026-devices">
+          <category name="ie026-devices"/>
+        </row-def>
+        <row-def label="ie027-devices">
+          <category name="ie027-devices"/>
+        </row-def>
+        <row-def label="ie065-devices">
+          <category name="ie065-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="de-router-leasedline-ost"/>
+          <category name="ie-router-leasedline"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="de-router-backup-ost"/>
+          <category name="ie-router-backup"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="de-switche-ost"/>
+          <category name="ie-switche"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="de-accesspoints-ost"/>
+          <category name="ie-accesspoints"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="de-it-sued" refresh-seconds="300">
+      <rows>
+        <row-def label="de041-devices">
+          <category name="de041-devices"/>
+        </row-def>
+        <row-def label="de047-devices">
+          <category name="de047-devices"/>
+        </row-def>
+        <row-def label="de072-devices">
+          <category name="de072-devices"/>
+        </row-def>
+        <row-def label="de079-devices">
+          <category name="de079-devices"/>
+        </row-def>
+        <row-def label="de080-devices">
+          <category name="de080-devices"/>
+        </row-def>
+        <row-def label="de081-devices">
+          <category name="de081-devices"/>
+        </row-def>
+        <row-def label="de082-devices">
+          <category name="de082-devices"/>
+        </row-def>
+        <row-def label="de083-devices">
+          <category name="de083-devices"/>
+        </row-def>
+        <row-def label="de084-devices">
+          <category name="de084-devices"/>
+        </row-def>
+        <row-def label="de085-devices">
+          <category name="de085-devices"/>
+        </row-def>
+        <row-def label="de086-devices">
+          <category name="de086-devices"/>
+        </row-def>
+        <row-def label="de089-devices">
+          <category name="de089-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="de-router-leasedline-sued"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="de-router-backup-sued"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="de-switche-sued"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="de-accesspoints-sued"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="de-it-sued-bayer" refresh-seconds="300">
+      <rows>
+        <row-def label="de080-devices">
+          <category name="de080-devices"/>
+        </row-def>
+        <row-def label="de081-devices">
+          <category name="de081-devices"/>
+        </row-def>
+        <row-def label="de082-devices">
+          <category name="de082-devices"/>
+        </row-def>
+        <row-def label="de084-devices">
+          <category name="de084-devices"/>
+        </row-def>
+        <row-def label="de067-devices">
+          <category name="de067-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="de-router-leasedline-sued"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="de-router-backup-sued"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="de-switche-sued"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="de-accesspoints-sued"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="de-it-sued-west" refresh-seconds="300">
+      <rows>
+        <row-def label="de066-devices">
+          <category name="de066-devices"/>
+        </row-def>
+        <row-def label="de068-devices">
+          <category name="de068-devices"/>
+        </row-def>
+        <row-def label="de070-devices">
+          <category name="de070-devices"/>
+        </row-def>
+        <row-def label="de071-devices">
+          <category name="de071-devices"/>
+        </row-def>
+        <row-def label="de073-devices">
+          <category name="de073-devices"/>
+        </row-def>
+        <row-def label="de074-devices">
+          <category name="de074-devices"/>
+        </row-def>
+        <row-def label="de075-devices">
+          <category name="de075-devices"/>
+        </row-def>
+        <row-def label="de076-devices">
+          <category name="de076-devices"/>
+        </row-def>
+        <row-def label="de077-devices">
+          <category name="de077-devices"/>
+        </row-def>
+        <row-def label="de078-devices">
+          <category name="de078-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="de-router-leasedline-sued-west"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="de-router-backup-sued-west"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="de-switche-sued-west"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="de-accesspoints-sued-west"/>
+        </column-def>
+        <column-def label="Spec-Devices">
+          <category name="de-devices-spec-sued-west"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="de-it-nord" refresh-seconds="300">
+      <rows>
+        <row-def label="de020-devices">
+          <category name="de020-devices"/>
+        </row-def>
+        <row-def label="de023-devices">
+          <category name="de023-devices"/>
+        </row-def>
+        <row-def label="de025-devices">
+          <category name="de025-devices"/>
+        </row-def>
+        <row-def label="de028-devices">
+          <category name="de028-devices"/>
+        </row-def>
+        <row-def label="de029-devices">
+          <category name="de029-devices"/>
+        </row-def>
+        <row-def label="de030-devices">
+          <category name="de030-devices"/>
+        </row-def>
+        <row-def label="de035-devices">
+          <category name="de035-devices"/>
+        </row-def>
+        <row-def label="de045-devices">
+          <category name="de045-devices"/>
+        </row-def>
+        <row-def label="de048-devices">
+          <category name="de048-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="de-router-leasedline-nord"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="de-router-backup-nord"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="de-switche-nord"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="de-accesspoints-nord"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="de-it-mitte" refresh-seconds="300">
+      <rows>
+        <row-def label="de054-devices">
+          <category name="de054-devices"/>
+        </row-def>
+        <row-def label="de060-devices">
+          <category name="de060-devices"/>
+        </row-def>
+        <row-def label="de063-devices">
+          <category name="de063-devices"/>
+        </row-def>
+        <row-def label="de064-devices">
+          <category name="de064-devices"/>
+        </row-def>
+        <row-def label="de087-devices">
+          <category name="de087-devices"/>
+        </row-def>
+        <row-def label="de088-devices">
+          <category name="de088-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="de-router-leasedline-mitte"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="de-router-backup-mitte"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="de-switche-mitte"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="de-accesspoints-mitte"/>
+        </column-def>
+      </columns>
+    </view>
+    <view name="de-it-west" refresh-seconds="300">
+      <rows>
+        <row-def label="de040-devices">
+          <category name="de040-devices"/>
+        </row-def>
+        <row-def label="de042-devices">
+          <category name="de042-devices"/>
+        </row-def>
+        <row-def label="de046-devices">
+          <category name="de046-devices"/>
+        </row-def>
+        <row-def label="de049-devices">
+          <category name="de049-devices"/>
+        </row-def>
+        <row-def label="de050-devices">
+          <category name="de050-devices"/>
+        </row-def>
+        <row-def label="de056-devices">
+          <category name="de056-devices"/>
+        </row-def>
+      </rows>
+      <columns>
+        <column-def label="Router-Leasedline">
+          <category name="de-router-leasedline-west"/>
+        </column-def>
+        <column-def label="Router-Backup">
+          <category name="de-router-backup-west"/>
+        </column-def>
+        <column-def label="Switche">
+          <category name="de-switche-west"/>
+        </column-def>
+        <column-def label="Accesspoints">
+          <category name="de-accesspoints-west"/>
+        </column-def>
+      </columns>
+    </view>
+  </views>
+</surveillance-view-configuration>

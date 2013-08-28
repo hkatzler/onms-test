@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2011-11-15T15:32:32.400+01:00" name="de001-firewalls-virtual" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP">
+            <parameter value="2" key="retries"/>
+            <parameter value="4000" key="timeout"/>
+        </detector>
+    </detectors>
+    <policies/>
+</foreign-source>

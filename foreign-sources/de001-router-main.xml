@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<foreign-source date-stamp="2012-12-20T11:03:39.622+01:00" name="de001-router-main" xmlns="http://xmlns.opennms.org/xsd/config/foreign-source">
+    <scan-interval>1d</scan-interval>
+    <detectors>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="ICMP"/>
+        <detector class="org.opennms.netmgt.provision.detector.icmp.IcmpDetector" name="StrafePing"/>
+    </detectors>
+    <policies>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.230.14.247" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.230.1.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.230.4.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="217.7.24.7" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.3.99.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.230.254.1" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.230.14.250" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.7.55.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.7.55.156" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.7.240.40" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.3.0.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.3.1.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.2.240.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="10.3.96.10" key="ipAddress"/>
+        </policy>
+        <policy class="org.opennms.netmgt.provision.persist.policies.MatchingIpInterfacePolicy" name="BlkVirtual_1">
+            <parameter value="DO_NOT_PERSIST" key="action"/>
+            <parameter value="ANY_PARAMETER" key="matchBehavior"/>
+            <parameter value="217.7.24.180" key="ipAddress"/>
+        </policy>
+    </policies>
+</foreign-source>

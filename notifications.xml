@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notifications xmlns="http://xmlns.opennms.org/xsd/notifications">
+    <header>
+        <rev>1.2</rev>
+        <created>Thursday, March 14, 2013 7:07:21 AM GMT</created>
+        <mstation>localhost</mstation>
+    </header>
+    <notification name="interfaceDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDown</uei>
+        <rule>(IPADDR != '0.0.0.0')</rule>
+        <destinationPath>heiko-nodeDown</destinationPath>
+        <text-message>All services are down on interface %interfaceresolve% (%interface%) &#xd;
+on node %nodelabel%.  New Outage records have been created &#xd;
+and service level availability calculations will be impacted. %asset[systemlocation]%&#xd;
+until this outage is resolved.  &#xd;
+	</text-message>
+        <subject>Notice #%noticeid%: %interfaceresolve% (%interface%) on node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: de-router-backup-DSL interfaceDown"
+        status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDown</uei>
+        <rule>(IPADDR IPLIKE 172.30.99.*)</rule>
+        <destinationPath>netops-nst-DELAY</destinationPath>
+        <text-message>All services are down on interface (%interface%) &#xd;
+on node %nodelabel%.  New Outage records have been created &#xd;
+and service level availability calculations will be impacted &#xd;
+until this outage is resolved.  &#xd;
+        </text-message>
+        <subject>Notice #%noticeid%: Interface (%interface%) on node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: de-router-virtual interfaceDown"
+        status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDown</uei>
+        <rule>(catincde-router-virtual) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>All services are down on interface (%interface%) &#xd;
+on node %nodelabel%.  New Outage records have been created &#xd;
+and service level availability calculations will be impacted &#xd;
+until this outage is resolved.  &#xd;
+        </text-message>
+        <subject>Notice #%noticeid%: Interface (%interface%) on node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: Path Outages" status="off" writeable="yes">
+        <uei>uei.opennms.org/nodes/pathOutage</uei>
+        <description>Nur eine Meldung, wenn der Router ausfällt</description>
+        <rule>(IPADDR IPLIKE 10.2.7-99.10) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>Router %nodelabel% is down. Caution: As a result a path outage may occur</text-message>
+        <subject>Router %nodelabel% is down. Caution: As a result a path outage may occur</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: at-router-virtual interfaceDown"
+        status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDown</uei>
+        <rule>(catincat-router-virtual) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>All services are down on interface (%interface%) &#xd;
+on node %nodelabel%.  New Outage records have been created &#xd;
+and service level availability calculations will be impacted &#xd;
+until this outage is resolved.  &#xd;
+        </text-message>
+        <subject>Notice #%noticeid%: Interface (%interface%) on node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: ie-router-virtual nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(catincie-router-virtual) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: de001-derz01-server nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(catincde001-derz01-server)</rule>
+        <destinationPath>netops-nst-immediately</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: ie-router-virtual interfaceDown"
+        status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDown</uei>
+        <rule>(catincie-router-virtual) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>All services are down on interface (%interface%) &#xd;
+on node %nodelabel%.  New Outage records have been created &#xd;
+and service level availability calculations will be impacted &#xd;
+until this outage is resolved.  &#xd;
+        </text-message>
+        <subject>Notice #%noticeid%: Interface (%interface%) on node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: at-router-virtual nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(catincat-router-virtual) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: de-router-virtual nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(catincde-router-virtual) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: de001-switche nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(catincde001-switche) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: de001-environment-derz01 nodeDown"
+        status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(IPADDR != '0.0.0.0') &amp; (catincde001-environment-derz01) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst-URGENT-with-Prowl</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: de-switche nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(catincde-switche) &amp; (IPADDR IPLIKE 10.2.*.*) &amp;  (isICMP )</rule>
+        <destinationPath>netops-nst</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="nodeLostService" status="off" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeLostService</uei>
+        <rule>(IPADDR != '0.0.0.0')</rule>
+        <destinationPath>heiko-nodeDown</destinationPath>
+        <text-message>The %service% service poll on interface %interfaceresolve% (%interface%) &#xd;
+on node %nodelabel% failed at %time%. &#xd;
+	</text-message>
+        <subject>Notice #%noticeid%: %service% down on %interfaceresolve% (%interface%) on node %nodelabel%.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="nodeAdded" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeAdded</uei>
+        <rule>(IPADDR != '0.0.0.0')</rule>
+        <destinationPath>opennms-admin</destinationPath>
+        <text-message>OpenNMS has discovered a new node named&#xd;
+%parm[nodelabel]%. Please be advised.</text-message>
+        <subject>Notice #%noticeid%: %parm[nodelabel]% discovered.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="nodeDown" status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(IPADDR != '0.0.0.0')</rule>
+        <destinationPath>heiko-nodeDown</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have&#xd;
+been created and service level availability calculations will&#xd;
+be impacted until this outage is resolved. %asset[systemlocation]%, %asset[room]%&#xd;
+&#xd;
+&#xd;
+        </text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="interfaceDeleted" status="off" writeable="yes">
+        <uei>uei.opennms.org/nodes/interfaceDeleted</uei>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>Due to extended downtime or operator action, the interface %interfaceresolve% (%interface%) 
+on node %nodelabel% has been deleted from OpenNMS's polling database.</text-message>
+        <subject>Notice #%noticeid%: [OpenNMS] %interfaceresolve% (%interface%) on node %nodelabel% deleted.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="High Threshold" status="off" writeable="yes">
+        <uei>uei.opennms.org/threshold/highThresholdExceeded</uei>
+        <description>A monitored device has hit a high threshold</description>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>A Threshold has been exceeded on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% while the threshold is %parm[threshold]%. This alert will be rearmed when %parm[ds]% reaches %parm[rearm]%.</text-message>
+        <subject>Notice #%noticeid%: High Threshold for %parm[ds]% on node %nodelabel%.</subject>
+    </notification>
+    <notification name="Low Threshold" status="off" writeable="yes">
+        <uei>uei.opennms.org/threshold/lowThresholdExceeded</uei>
+        <description>A monitored device has hit a low threshold</description>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>A Threshold has been exceeded on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% while the threshold is %parm[threshold]%. This alert will be rearmed when %parm[ds]% reaches %parm[rearm]%.</text-message>
+        <subject>Notice #%noticeid%: Low Threshold for %parm[ds]% on node %nodelabel%.</subject>
+    </notification>
+    <notification name="High Threshold Rearmed" status="off" writeable="yes">
+        <uei>uei.opennms.org/threshold/highThresholdRearmed</uei>
+        <description>A monitored device has recovered from a high threshold</description>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>A Threshold has returned to normal on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% with a rearm threshold of %parm[rearm]%. This threshold for this alert was %parm[threshold]%.</text-message>
+        <subject>Notice #%noticeid%: High Threshold Rearmed for %parm[ds]% on node %nodelabel%.</subject>
+    </notification>
+    <notification name="Low Threshold Rearmed" status="off" writeable="yes">
+        <uei>uei.opennms.org/threshold/lowThresholdRearmed</uei>
+        <description>A monitored device has recovered from a low threshold</description>
+        <rule>IPADDR != '0.0.0.0'</rule>
+        <destinationPath>Email-Admin</destinationPath>
+        <text-message>A Threshold has returned to normal on node: %nodelabel%, interface:%interface%. The parameter %parm[ds]% reached a value of %parm[value]% with a rearm threshold of %parm[rearm]%. This threshold for this alert was %parm[threshold]%.</text-message>
+        <subject>Notice #%noticeid%: High Threshold Rearmed for %parm[ds]% on node %nodelabel%.</subject>
+    </notification>
+    <notification name="GLS: Used Partition size over 95 percent-eMail"
+        status="on" writeable="yes">
+        <uei>GLS/custom/dskabove95</uei>
+        <description>The used partition size is over 95 %</description>
+        <rule>(IPADDR IPLIKE *.*.*.*)</rule>
+        <destinationPath>netops-nst</destinationPath>
+        <text-message>The partition %parm[label]% on system %nodelabel% is used more than 95% of disk space. Please reduce usage down to 85%.</text-message>
+        <subject>[Warning] #%noticeid% - %nodelabel%: Partition %parm[label]% over 95%</subject>
+        <numeric-message>[Warning] #%noticeid% - %nodelabel%: Partition %parm[label]% over 95%</numeric-message>
+    </notification>
+    <notification name="GLS: Vodafone IPSec Tunnel inaktiv" status="off" writeable="yes">
+        <uei>uei.opennms.org/vendor/Cisco/traps/cipSecTunnelStop</uei>
+        <description>Vodafone M2M VPN IPSec Tunnel ist inaktiv</description>
+        <rule>(IPADDR IPLIKE 10.3.96.11)</rule>
+        <destinationPath>opennms-admin</destinationPath>
+        <text-message>Der IPSec Tunnel der VFM2M Verbindung ist inaktiv</text-message>
+        <subject>Notice #%noticeid%: ACHTUNG: VFM2M IPSec Tunnel inaktiv! node: %nodelabel%</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+    <notification name="GLS: Vodafone M2M Low Threshold" status="on" writeable="yes">
+        <uei>GLS/custom/lowThresholdExceededVF</uei>
+        <description>Vodafone M2M VPN Verbindung ist down</description>
+        <rule>(IPADDR IPLIKE 10.3.96.11-12)</rule>
+        <destinationPath>VodafoneM2M</destinationPath>
+        <text-message>Die Bandbreite der VFM2M Verbindung ist auf dem Interface %parm[ifIpAddress]% der node %nodelabel% unter 50 kbit/s. Der Alarm wird wieder aufgehoben, wenn die Bandbreite 100 kb&#xd;
+it/s uebersteigt.</text-message>
+        <subject>Notice #%noticeid%: ACHTUNG: VFM2M Bandbreite auf Interface %parm[ifIpAddress]% unter 50 kbit/s, node: %nodelabel%</subject>
+    </notification>
+    <notification name="GLS: Vodafone M2M Low Threshold rearmed"
+        status="on" writeable="yes">
+        <uei>GLS/custom/lowThresholdRearmedVF</uei>
+        <description>Vodafone M2M VPN Verbindung ist wieder da</description>
+        <rule>(IPADDR IPLIKE 10.3.96.11-12)</rule>
+        <destinationPath>VodafoneM2M</destinationPath>
+        <text-message>Die Bandbreite der VFM2M Verbindung ist auf dem Interface %parm[ifIpAddress]% der node %nodelabel% wieder ueber 100 kbit/s. Der Alarm fuer den Warnschwellenwert von 50 kbit/s ist aufgehoben.</text-message>
+        <subject>Notice #%noticeid%: Bandbreite VFM2M auf Interface %parm[ifIpAddress]% wieder ueber 100 kbit/s, node:  %nodelabel%</subject>
+    </notification>
+    <notification name="GLS: de-it-sued-bayer nodeDown " status="on" writeable="yes">
+        <uei>uei.opennms.org/nodes/nodeDown</uei>
+        <rule>(IPADDR IPLIKE 10.2.80,81,82,84.*) &amp;  (isICMP )</rule>
+        <destinationPath>de-it-sued-bayer</destinationPath>
+        <text-message>All services are down on node %nodelabel%.  New Outage records have &#xd;
+been created and service level availability calculations will &#xd;
+be impacted until this outage is resolved.</text-message>
+        <subject>Notice #%noticeid%: node %nodelabel% down.</subject>
+        <numeric-message>111-%noticeid%</numeric-message>
+    </notification>
+</notifications>

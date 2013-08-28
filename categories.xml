@@ -1,0 +1,3170 @@
+<?xml version="1.0"?>
+<catinfo>
+  <header>
+    <rev>1.3</rev>
+    <created>Wednesday, February 6, 2002 10:10:00 AM EST</created>
+    <mstation>checkers</mstation>
+  </header>
+  <categorygroup>
+    <name>WebConsole</name>
+    <comment>Service Level Availability by Functional Group</comment>
+    <common>
+      <rule><![CDATA[IPADDR != '0.0.0.0']]></rule>
+    </common>
+    <categories>
+      <category>
+        <label><![CDATA[Overall Service Availability]]></label>
+        <comment>This category reflects availability of all services currently being monitored by OpenNMS.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <rule><![CDATA[IPADDR != '0.0.0.0']]></rule>
+      </category>
+      <category>
+        <label><![CDATA[Network Interfaces]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents.  'Ping', using the ICMP protocol, tests a devices network connectivity/availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <service>SNMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) & (IPADDR != '0.0.0.0')]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincde-router-virtual)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-router-backup]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-router-backup)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-router-virtual)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-router-leasedline]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-router-leasedline)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-router-test]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-router-test)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-environment-derz01]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-environment-derz01)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-f5lb]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-f5lb)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-environment]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-environment)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de-heitel]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde-heitel)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de-telenot]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde-telenot)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-special-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-spec-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-server]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR != '0.0.0.0') & (catincde001-server)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-backbone]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-backbone)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-lbproxy]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-lbproxy)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-derz01]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-derz01)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-lan100]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-lan100)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-firewalls]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-firewalls)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-telefonie]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-telefonie)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-cisco-blade-qs]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-cisco-blade-qs)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-cisco-blade-pr]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-cisco-blade-pr)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-accesspoints]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) &  (IPADDR != '0.0.0.0') & (catincde001-accesspoints)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de007-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde007-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de010-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde010-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de011-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde011-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de012-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde012-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de013-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde013-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de014-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde014-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de015-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde015-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de016-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde016-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de017-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde017-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de018-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde018-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de019-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde019-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de044-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde044-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de033-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde033-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de036-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde036-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de037-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde037-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de041-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde041-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de047-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde047-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de067-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde067-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de072-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde072-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de079-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde079-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de080-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde080-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de081-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde081-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de082-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde082-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de083-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde083-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de084-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde084-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de085-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde085-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de086-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde086-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de089-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde089-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de066-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde066-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de068-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde068-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de070-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde070-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de071-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde071-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de073-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde073-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de074-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde074-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de075-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde075-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de076-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde076-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de077-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde077-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de078-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde078-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de020-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde020-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de023-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde023-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de025-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde025-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de028-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde028-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de029-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde029-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de030-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde030-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de035-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde035-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de045-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde045-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de048-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde048-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de054-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde054-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de060-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde060-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de063-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde063-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de064-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde064-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de069-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde069-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de087-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde087-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de088-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde088-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de093-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde093-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de040-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde040-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de042-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde042-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de046-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde046-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de049-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde049-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de050-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde050-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de056-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde056-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de009-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde009-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de099-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde099-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de057-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde057-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de091-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde091-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de096-devices-ho-back]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde096-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de095-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde095-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de200-devices-ho-conrad]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde200-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincat-router-virtual)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at031-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat031-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at032-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat032-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at034-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat034-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at038-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat038-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at039-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat039-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at051-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat051-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at052-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat052-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at053-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat053-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at057-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat057-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at058-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat058-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[at059-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincat059-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[ie-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincie-router-virtual)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[ie021-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincie021-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[ie022-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincie022-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[ie024-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincie024-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[ie026-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincie026-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[ie027-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincie027-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[ie065-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincie065-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl240-devices-hq]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl240-devices-hq)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl009-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl009-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl010-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl010-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl018-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl018-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl019-devices-testenv]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl019-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl025-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl025-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl035-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl035-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl036-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl036-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl041-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl041-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl042-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl042-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl044-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl044-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl052-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl052-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl060-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl060-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl061-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl061-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl065-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl065-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl076-devices-testenv]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl076-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl079-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl079-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl080-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl080-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl097-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincnl097-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[nl-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincnl-router-virtual)]]></rule>
+      </category>
+
+      
+      <category>
+        <label><![CDATA[be003-devices-hq]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe003-devices-hq)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be061-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe061-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be067-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe067-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be068-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe068-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be069-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe069-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be071-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe071-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be072-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe072-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be073-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe073-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be074-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe074-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be076-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe076-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be078-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe078-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be082-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe082-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be099-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincbe099-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[be-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincbe-router-virtual)]]></rule>
+      </category>
+
+      <category>
+        <label><![CDATA[lu069-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinclu069-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[lu-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catinclu-router-virtual)]]></rule>
+      </category>
+
+      
+      <category>
+        <label><![CDATA[pl010-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl010-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl015-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl015-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl019-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl019-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl025-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl025-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl026-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl026-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl029-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl029-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl030-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl030-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl033-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl033-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl034-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl034-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl035-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl035-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl042-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl042-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl043-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl043-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl044-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl044-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl045-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl045-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl050-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl050-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl051-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl051-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl054-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl054-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl059-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl059-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl060-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl060-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl062-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl062-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl063-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl063-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl064-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl064-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl065-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl065-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl066-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl066-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl070-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl070-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl075-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl075-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl077-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl077-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl080-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl080-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl083-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl083-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl085-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl085-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl087-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl087-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl090-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl090-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl091-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpl091-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pl-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincpl-router-virtual)]]></rule>
+      </category>
+
+
+      <category>
+        <label><![CDATA[pt009-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt009-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt020-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt020-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt021-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt021-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt022-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt022-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt023-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt023-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt024-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt024-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt092-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt092-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt094-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt094-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt095-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt095-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[pt096-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincpt096-devices)]]></rule>
+      </category>
+       <category>
+        <label><![CDATA[pt-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincpt-router-virtual)]]></rule>
+      </category>
+
+
+      <category>
+        <label><![CDATA[es031-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces031-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es032-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces032-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es036-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces036-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es037-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces037-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es038-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces038-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es039-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces039-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es041-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces041-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es046-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces046-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es091-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces091-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es092-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces092-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es093-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces093-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es095-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces095-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es096-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces096-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es097-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces097-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es098-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces098-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es099-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces099-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es201-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces201-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es203-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces203-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es205-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces205-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es207-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces207-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es209-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces209-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es227-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces227-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[es215-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinces215-devices)]]></rule>
+      </category>
+       <category>
+        <label><![CDATA[es-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catinces-router-virtual)]]></rule>
+      </category>
+
+      <category>
+        <label><![CDATA[fr001-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr001-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr003-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr003-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr004-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr004-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr005-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr005-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr006-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr006-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr008-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr008-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr009-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr009-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr010-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr010-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr012-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr012-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr013-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr013-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr014-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr014-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr016-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr016-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr017-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr017-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr018-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr018-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr019-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr019-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr020-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr020-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr021-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr021-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr022-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr022-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr023-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr023-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr025-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr025-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr026-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr026-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr029-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr029-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr031-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr031-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr032-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr032-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr033-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr033-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr035-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr035-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr037-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr037-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr038-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr038-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr040-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr040-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr042-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr042-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr043-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr043-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr044-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr044-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr045-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr045-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr046-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr046-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr048-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr048-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr049-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr049-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr050-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr050-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr051-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr051-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr052-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr052-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr054-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr054-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr055-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr055-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr056-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr056-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr057-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr057-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr059-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr059-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr060-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr060-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr063-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr063-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr064-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr064-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr066-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr066-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr067-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr067-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr068-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr068-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr069-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr069-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr070-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr070-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr071-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr071-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr072-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr072-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr073-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr073-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr074-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr074-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr075-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr075-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr076-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr076-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr078-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr078-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr079-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr079-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr080-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr080-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr081-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr081-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr082-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr082-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr084-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr084-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr087-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr087-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr088-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr088-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr089-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr089-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr092-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr092-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr094-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr094-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr095-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr095-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr097-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr097-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr098-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr098-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr099-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr099-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr203-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr203-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr205-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr205-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr207-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr207-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr209-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr209-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr211-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr211-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr215-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr215-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr217-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr217-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr219-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr219-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr221-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr221-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr223-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr223-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr225-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr225-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr229-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr229-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr231-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr231-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr235-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr235-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr237-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr237-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr243-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr243-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr245-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr245-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fr251-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfr251-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[cz05-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinccz05-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[fi230-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincfi230-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[gb091-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincgb091-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[hu010-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catinchu010-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[it001-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincit001-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[si011-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincsi011-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[sk100-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincsk100-devices)]]></rule>
+      </category>
+
+      <category>
+        <label><![CDATA[dk011-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincdk011-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[dk063-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincdk063-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[dk050-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincdk050-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[dk069-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincdk069-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[dk088-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincdk088-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[dk093-devices]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincdk093-devices)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[dk-router-virtual]]></label>
+        <comment>This category reflects the ability to 'ping' managed accesspoints in Neuenstein  'Ping', using the ICMP protocol, tests a devices network connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP) & (IPADDR IPLIKE *.*.*.10) & (catincdk-router-virtual)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[derz02-avocent-stromschienen]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincderz02-avocent-stromschienen)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[derz02-switche]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincderz02-switche)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-switche-portal2]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-switche-portal2)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[gls-ftp-server]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isFTP) &  (IPADDR != '0.0.0.0') & (catincgls-ftp-server)]]></rule>
+      </category>
+      <category>
+        <label><![CDATA[de001-pas-server]]></label>
+        <comment>This category reflects the ability to 'ping' managed devices and SNMP agents  'Ping', using the ICMP protocol, tests a devices netw
+ork connectivity/
+availability.</comment>
+        <normal>99.99</normal>
+        <warning>97</warning>
+        <service>ICMP</service>
+        <rule><![CDATA[(isICMP | isSNMP) &  (IPADDR != '0.0.0.0') & (catincde001-pas-server)]]></rule>
+      </category>
+
+
+    </categories>
+  </categorygroup>
+</catinfo>
